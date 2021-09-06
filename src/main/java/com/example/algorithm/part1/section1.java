@@ -30,7 +30,7 @@ public class section1 {
         Scanner scan = new Scanner(System.in);
         String str = scan.next();
         char c = scan.next().charAt(0);
-        
+
         System.out.println(se.solution(str, c));
     }
 }
