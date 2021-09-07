@@ -11,6 +11,7 @@ public class section3 {
         for(String x : strArr) {
             int len = x.length();
             if(len > m) {
+                m = len;
                 answer = x;
             }
         }
