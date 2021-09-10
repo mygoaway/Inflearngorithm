@@ -12,7 +12,6 @@ public class section6 {
                 answer += str.charAt(i);
             }
         }
-
         return answer;
     }
 
