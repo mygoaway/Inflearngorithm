@@ -18,7 +18,7 @@ public class section10 {
         }
 
         p = 1000;
-        for(int i = str.length() - 1; i >= 0; i--) {
+        for(int i = str.length()-1; i >=0; i--) {
             if(str.charAt(i) == ch) {
                 p = 0;
             } else {
@@ -26,7 +26,6 @@ public class section10 {
                 intArr[i] = Math.min(intArr[i], p);
             }
         }
-
         return intArr;
     }
 
