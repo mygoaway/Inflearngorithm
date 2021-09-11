@@ -6,14 +6,13 @@ public class section9 {
     public int solution(String str) {
         String answer = "";
 
-        for(char x : str.toCharArray()) {
-            if(Character.isDigit(x)) {
-                answer += x;
+        for(int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if(Character.isDigit(ch)) {
+                answer += ch;
             }
         }
-
         int result = Integer.parseInt(answer);
-
         return result;
     }
 

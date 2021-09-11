@@ -5,30 +5,18 @@ import java.util.Scanner;
 public class section3 {
     public String solution(String str) {
         String answer = "";
-        int m = Integer.MIN_VALUE; // 정수의 최소값
 
-        String[] strArr = str.split(" ");
-        for(String x : strArr) {
-            int len = x.length();
+        int m = Integer.MIN_VALUE;
+
+        String [] strArr = str.split(" ");
+        for(int i = 0; i < strArr.length; i++) {
+            int len =  strArr[i].length();
             if(len > m) {
                 m = len;
-                answer = x;
+                answer = strArr[i];
             }
         }
 
-        int pos;
-        while((pos=str.indexOf(" ")) != -1) {
-            String tmp = str.substring(0, pos);
-            int len1 = tmp.length();
-            if(len1 > m) {
-                m = len1;
-                answer = tmp;
-            }
-            str = str.substring(pos + 1);
-        }
-        if(str.length() > m) {
-            answer = str;
-        }
 
         return answer;
     }

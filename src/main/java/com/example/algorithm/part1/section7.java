@@ -6,18 +6,9 @@ public class section7 {
     public String solution(String str) {
         String answer ="NO";
 
-        /*
         str = str.toUpperCase();
-        int len = str.length();
-        for(int i = 0; i < len/2; i++) {
-            if(str.charAt(i) != str.charAt(len-i-1)) {
-                return "NO";
-            }
-        }
-        */
-
         String tmp = new StringBuilder(str).reverse().toString();
-        if(str.equalsIgnoreCase(tmp)) {
+        if(str.equals(tmp)) {
             return "YES";
         }
 

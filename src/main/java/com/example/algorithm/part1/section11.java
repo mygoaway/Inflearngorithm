@@ -6,18 +6,18 @@ public class section11 {
     public String solution(String str) {
         String answer = "";
 
-        str = str + "";
-        int cnt = 1;
+        int num = 1;
+        str = str + " ";
 
-        for(int i = 0; i < str.length()-1; i++) {
+        for(int i = 0; i < str.length() - 1; i++) {
             if(str.charAt(i) == str.charAt(i+1)) {
-                cnt++;
+                num++;
             } else {
                 answer += str.charAt(i);
-                if(cnt > 1) {
-                    answer += String.valueOf(cnt);
+                if(num > 1) {
+                    answer += num;
                 }
-                cnt = 1;
+                num = 1;
             }
         }
 

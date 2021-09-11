@@ -6,26 +6,27 @@ public class section10 {
     public int [] solution(String str, char ch) {
         int [] intArr = new int[str.length()];
 
-        int p = 1000;
+        int num = 1000;
         for(int i = 0; i < str.length(); i++) {
             if(str.charAt(i) == ch) {
-                p = 0;
-                intArr[i] = p;
+                num = 0;
+                intArr[i] = num;
             } else {
-                p++;
-                intArr[i] = p;
+                num++;
+                intArr[i] = num;
             }
         }
 
-        p = 1000;
-        for(int i = str.length()-1; i >=0; i--) {
+        num = 1000;
+        for(int i = str.length()-1; i >= 0; i--) {
             if(str.charAt(i) == ch) {
-                p = 0;
+                num = 0;
             } else {
-                p++;
-                intArr[i] = Math.min(intArr[i], p);
+                num++;
+                intArr[i] = Math.min(intArr[i], num);
             }
         }
+
         return intArr;
     }
 

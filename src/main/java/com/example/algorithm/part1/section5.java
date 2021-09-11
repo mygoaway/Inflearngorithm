@@ -7,25 +7,25 @@ public class section5 {
     public String solution(String str) {
         String answer ="";
 
-        char[] charArr = str.toCharArray();
+        char[] charArray = str.toCharArray();
         int lt = 0;
-        int rt = charArr.length-1;
-        while(lt < rt) {
-            if(!Character.isAlphabetic(charArr[lt])) {
+        int rt = charArray.length - 1;
+
+        while (lt < rt) {
+            if(!Character.isAlphabetic(charArray[lt])) {
                 lt++;
-            } else if(!Character.isAlphabetic(charArr[rt])) {
+            } else if (!Character.isAlphabetic(charArray[rt])) {
                 rt--;
             } else {
-                char tmp = charArr[lt];
-                charArr[lt] = charArr[rt];
-                charArr[rt] = tmp;
+                char tmp = charArray[lt];
+                charArray[lt] = charArray[rt];
+                charArray[rt] = tmp;
                 lt++;
                 rt--;
             }
         }
-        answer = String.valueOf(charArr);
 
-        return answer;
+        return String.valueOf(charArray);
     }
 
     public static void main(String[] args) {

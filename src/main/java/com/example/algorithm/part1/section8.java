@@ -7,10 +7,10 @@ public class section8 {
         String answer ="NO";
 
         str = str.toUpperCase().replaceAll("[^A-Z]", "");
-
         String tmp = new StringBuilder(str).reverse().toString();
+
         if(str.equals(tmp)) {
-            answer = "YES";
+            return "YES";
         }
 
         return answer;
