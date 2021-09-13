@@ -1,3 +1,4 @@
+
 package com.example.algorithm.part2;
 
 import java.util.Scanner;
