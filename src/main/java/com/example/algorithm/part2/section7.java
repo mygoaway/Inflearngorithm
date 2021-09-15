@@ -18,6 +18,9 @@ public class section7 {
     }
 
     public int solution(int cnt, int [] intArr) {
+
+
+
         int answer = 0;
         int num = 0;
 
@@ -29,7 +32,7 @@ public class section7 {
                 num = 0;
             }
         }
-        
+
         return answer;
     }
 
