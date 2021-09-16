@@ -42,6 +42,4 @@ public class section9 {
 
         return answer;
     }
-
-
 }
