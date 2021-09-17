@@ -25,9 +25,9 @@ public class section10 {
             for(int j = 0; j < cnt; j++) {
                 boolean flag = true;
                 for(int k = 0; k < 4; k++) {
-                    int nx = i+dx[k];
-                    int ny = j+dy[k];
-                    if(nx >= 0 && nx < cnt && ny >= 0 && ny < cnt && intArr[nx][ny] >= intArr[i][j]) {
+                    int nx = i + dx[k];
+                    int ny = j + dy[k];
+                    if(nx >= 0 && nx < cnt && ny >= 0 && ny < cnt && intArr[nx][ny] > intArr[i][j]) {
                         flag = false;
                         break;
                     }
@@ -35,9 +35,9 @@ public class section10 {
                 if(flag) {
                     answer++;
                 }
-
             }
         }
+
 
         return answer;
     }
