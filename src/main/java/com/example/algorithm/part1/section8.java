@@ -9,7 +9,7 @@ public class section8 {
         str = str.toUpperCase().replaceAll("[^A-Z]", "");
         String tmp = new StringBuilder(str).reverse().toString();
 
-        if(str.equals(tmp)) {
+        if(str.equals(tmp)){
             return "YES";
         }
 

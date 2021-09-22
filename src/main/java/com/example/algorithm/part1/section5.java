@@ -11,10 +11,10 @@ public class section5 {
         int lt = 0;
         int rt = charArray.length - 1;
 
-        while (lt < rt) {
+        while( lt < rt) {
             if(!Character.isAlphabetic(charArray[lt])) {
                 lt++;
-            } else if (!Character.isAlphabetic(charArray[rt])) {
+            } else if(!Character.isAlphabetic(charArray[rt])) {
                 rt--;
             } else {
                 char tmp = charArray[lt];
@@ -24,7 +24,6 @@ public class section5 {
                 rt--;
             }
         }
-
         return String.valueOf(charArray);
     }
 

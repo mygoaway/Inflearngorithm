@@ -16,11 +16,11 @@ public class section11 {
                 answer += str.charAt(i);
                 if(num > 1) {
                     answer += num;
+                    num = 1;
                 }
-                num = 1;
             }
-        }
 
+        }
         return answer;
     }
 

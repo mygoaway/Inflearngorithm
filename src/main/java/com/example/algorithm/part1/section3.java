@@ -6,17 +6,18 @@ public class section3 {
     public String solution(String str) {
         String answer = "";
 
-        int m = Integer.MIN_VALUE;
+        int min = Integer.MIN_VALUE;
 
         String [] strArr = str.split(" ");
         for(int i = 0; i < strArr.length; i++) {
-            int len =  strArr[i].length();
-            if(len > m) {
-                m = len;
+            int len = strArr[i].length();
+
+            if(len > min) {
+                min = len;
                 answer = strArr[i];
             }
-        }
 
+        }
 
         return answer;
     }

@@ -8,6 +8,7 @@ public class section7 {
 
         str = str.toUpperCase();
         String tmp = new StringBuilder(str).reverse().toString();
+
         if(str.equals(tmp)) {
             return "YES";
         }
