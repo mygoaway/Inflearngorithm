@@ -36,7 +36,6 @@ public class section11 {
                 answer = i;
             }
         }
-
         return answer;
     }
 
