@@ -22,13 +22,14 @@ public class section4 {
         int answer = 0;
         int sum = 0;
         int lt = 0;
-
         for(int rt = 0; rt < a; rt++) {
-            sum+= intArrA[rt];
+            sum += intArrA[rt];
+
             if(sum == b) {
                 answer++;
             }
-            while(sum >= b) {
+
+            while(sum > b) {
                 sum -= intArrA[lt++];
                 if(sum == b) {
                     answer++;

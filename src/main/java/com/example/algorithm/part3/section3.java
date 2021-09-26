@@ -18,7 +18,6 @@ public class section3 {
         }
 
         System.out.print(se1.solution(cntA, cntB, intArrA));
-
     }
 
     public int solution(int a, int b, int [] intArrA) {
@@ -31,9 +30,10 @@ public class section3 {
         answer = sum;
 
         for(int i = b; i < a; i++) {
-            sum+=(intArrA[i]-intArrA[i-b]);
+            sum += intArrA[i] - intArrA[i-b];
             answer = Math.max(answer, sum);
         }
+
 
         return answer;
     }
