@@ -34,7 +34,8 @@ public class section2 {
         Arrays.sort(intArrA);
         Arrays.sort(intArrB);
 
-        int p1 = 0, p2 = 0;
+
+        int p1 = 0, p2 =0;
 
         while(p1 < a && p2 < b) {
             if(intArrA[p1] == intArrB[p2]) {

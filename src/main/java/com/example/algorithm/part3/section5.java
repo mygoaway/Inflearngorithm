@@ -15,20 +15,20 @@ public class section5 {
         int answer = 0;
         int n = cnt / 2 + 1;
         int [] intArr = new int[n];
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < intArr.length; i++) {
             intArr[i] = i + 1;
         }
 
         int sum = 0;
         int lt = 0;
-        for(int rt = 0; rt < n; rt++) {
+        for(int rt = 0; rt < intArr.length; rt++) {
             sum += intArr[rt];
             if(sum == cnt) {
                 answer++;
             }
-            while( sum > cnt) {
+            while(sum > cnt) {
                 sum -= intArr[lt++];
-                if( sum == cnt ) {
+                if(sum==cnt){
                     answer++;
                 }
             }

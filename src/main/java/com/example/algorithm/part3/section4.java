@@ -22,6 +22,8 @@ public class section4 {
         int answer = 0;
         int sum = 0;
         int lt = 0;
+
+
         for(int rt = 0; rt < a; rt++) {
             sum += intArrA[rt];
 

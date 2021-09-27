@@ -34,7 +34,6 @@ public class section3 {
             answer = Math.max(answer, sum);
         }
 
-
         return answer;
     }
 }
