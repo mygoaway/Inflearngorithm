@@ -32,7 +32,6 @@ public class section2 {
                 return "NO";
             }
         }
-
         return answer;
     }
 }
