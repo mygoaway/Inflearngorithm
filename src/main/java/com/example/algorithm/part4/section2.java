@@ -17,21 +17,22 @@ public class section2 {
     public String solution(String str1, String str2) {
         String answer = "YES";
 
-        HashMap<Character, Integer> map = new HashMap<>();
+        HashMap<Character, Integer> map1 = new HashMap<>();
         for(char x : str1.toCharArray()){
-            map.put(x, map.getOrDefault(x, 0) + 1);
+            map1.put(x, map1.getOrDefault(x, 0) + 1);
         }
 
+        HashMap<Character, Integer> map2 = new HashMap<>();
         for(char x : str2.toCharArray()){
-            map.put(x, map.getOrDefault(x, 0) - 1);
+            map2.put(x, map2.getOrDefault(x, 0) + 1);
         }
 
-        for(char key : map.keySet()) {
-            if(map.get(key) != 0) {
+        for(char key : map1.keySet()) {
+            if(map1.get(key) != map2.get(key)) {
                 return "NO";
             }
         }
-        
+
         return answer;
     }
 }
