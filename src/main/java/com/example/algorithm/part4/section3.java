@@ -25,18 +25,19 @@ public class section3 {
         Map <Integer, Integer> check = new HashMap<>();
 
         for(int i = 0; i < b; i++) {
-            check.put(intArrA[i], check.getOrDefault(intArrA[i], 0)+1);
+            check.put(intArrA[i], check.getOrDefault(intArrA[i], 0) + 1);
         }
         answer.add(check.size());
 
-        for(int j = b; j < a; j++) {
-            check.put(intArrA[j], check.getOrDefault(intArrA[j], 0 )+1);
-            check.put(intArrA[j-b], check.get(intArrA[j-b])-1);
-            if(check.get(intArrA[j-b]) == 0) {
-                check.remove(intArrA[j-b]);
+        for(int i = b; i < a; i++) {
+            check.put(intArrA[i], check.getOrDefault(intArrA[i], 0) + 1);
+            check.put(intArrA[i-b], check.get(intArrA[i-b]) - 1);
+            if(check.get(intArrA[i-b]) == 0) {
+                check.remove(intArrA[i-b]);
             }
             answer.add(check.size());
         }
+
 
         return answer;
     }

@@ -18,22 +18,21 @@ public class section1 {
 
     public char solution(int cnt, String str) {
         char answer = ' ';
-        int max = Integer.MIN_VALUE;
 
+        int max = Integer.MIN_VALUE;
         HashMap<Character, Integer> map = new HashMap<>();
 
         for(char x : str.toCharArray()) {
-            map.put(x, map.getOrDefault(x, 0)+1);
+            map.put(x, map.getOrDefault(x, 0) + 1);
         }
 
-        for(char key : map.keySet()) {
-            // System.out.println(key + " " + map.get(key));
-            if(map.get(key) > max)  {
-                max = map.get(key);
-                answer = key;
+        for(char ch : map.keySet()) {
+            int check = map.get(ch);
+            if(check > max) {
+                max = map.get(ch);
+                answer = ch;
             }
         }
-
 
         return answer;
     }
