@@ -24,20 +24,20 @@ public class section3 {
 
         Map <Integer, Integer> check = new HashMap<>();
 
-        for(int i = 0; i < b; i++) {
+        for(int i = 0; i < b-1; i++) {
             check.put(intArrA[i], check.getOrDefault(intArrA[i], 0) + 1);
         }
-        answer.add(check.size());
 
-        for(int i = b; i < a; i++) {
-            check.put(intArrA[i], check.getOrDefault(intArrA[i], 0) + 1);
-            check.put(intArrA[i-b], check.get(intArrA[i-b]) - 1);
-            if(check.get(intArrA[i-b]) == 0) {
-                check.remove(intArrA[i-b]);
-            }
+        int lt = 0;
+        for(int rt = b-1; rt < a; rt++) {
+            check.put(intArrA[rt], check.getOrDefault(intArrA[rt],0 )+1);
             answer.add(check.size());
+            check.put(intArrA[lt], check.get(intArrA[lt]) - 1);
+            if(check.get(intArrA[lt]) == 0) {
+                check.remove(intArrA[lt]);
+            }
+            lt++;
         }
-
 
         return answer;
     }
