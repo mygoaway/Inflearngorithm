@@ -19,9 +19,9 @@ public class section4 {
 
 
         HashMap<Character, Integer> bm = new HashMap<>();
-        bm.put('a', 1);
-        bm.put('b', 1);
-        bm.put('c', 1);
+        for(int i = 0; i < str2.length(); i++) {
+            bm.put(str2.charAt(i), bm.getOrDefault(str2.charAt(i), 0) + 1);
+        }
 
         HashMap<Character, Integer> am = new HashMap<>();
 
