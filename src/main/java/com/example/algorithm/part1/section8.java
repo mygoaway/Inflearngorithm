@@ -9,9 +9,10 @@ public class section8 {
         str = str.toUpperCase().replaceAll("[^A-Z]", "");
         String tmp = new StringBuilder(str).reverse().toString();
 
-        if(str.equals(tmp)){
-            return "YES";
+        if(str.equals(tmp)) {
+            answer = "YES";
         }
+
 
         return answer;
     }

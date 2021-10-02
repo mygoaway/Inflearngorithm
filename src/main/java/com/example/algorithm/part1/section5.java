@@ -5,26 +5,28 @@ import java.util.Scanner;
 
 public class section5 {
     public String solution(String str) {
-        String answer ="";
 
-        char[] charArray = str.toCharArray();
+        char [] charArr = str.toCharArray();
+
         int lt = 0;
-        int rt = charArray.length - 1;
+        int rt = charArr.length - 1;
 
-        while( lt < rt) {
-            if(!Character.isAlphabetic(charArray[lt])) {
+        while(lt < rt) {
+            if(!Character.isAlphabetic(charArr[lt])) {
                 lt++;
-            } else if(!Character.isAlphabetic(charArray[rt])) {
+            } else if(!Character.isAlphabetic(charArr[rt])) {
                 rt--;
             } else {
-                char tmp = charArray[lt];
-                charArray[lt] = charArray[rt];
-                charArray[rt] = tmp;
+                char tmp = charArr[lt];
+                charArr[lt] = charArr[rt];
+                charArr[rt] = tmp;
                 lt++;
                 rt--;
             }
         }
-        return String.valueOf(charArray);
+
+
+        return String.valueOf(charArr);
     }
 
     public static void main(String[] args) {

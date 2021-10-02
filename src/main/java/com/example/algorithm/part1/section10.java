@@ -12,20 +12,22 @@ public class section10 {
                 num = 0;
                 intArr[i] = num;
             } else {
-                num++;
+                num ++;
                 intArr[i] = num;
             }
         }
 
         num = 1000;
-        for(int i = str.length()-1; i >= 0; i--) {
+        for(int i = str.length() - 1; i >= 0; i--) {
             if(str.charAt(i) == ch) {
                 num = 0;
             } else {
-                num++;
+                num ++;
                 intArr[i] = Math.min(intArr[i], num);
             }
         }
+
+
 
         return intArr;
     }
@@ -38,7 +40,7 @@ public class section10 {
         char ch = scan.next().charAt(0);
 
         for(int x : se.solution(str, ch)) {
-            System.out.print(x);
+            System.out.print(x + " ");
         };
     }
 }

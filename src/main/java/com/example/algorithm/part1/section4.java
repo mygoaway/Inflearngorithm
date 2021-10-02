@@ -8,18 +8,22 @@ public class section4 {
         ArrayList<String> list = new ArrayList<>();
 
         for(int i = 0; i < strArr.length; i++) {
-            char[] charArray = strArr[i].toCharArray();
+            char [] charArr = strArr[i].toCharArray();
+
             int lt = 0;
-            int rt = charArray.length - 1;
+            int rt = charArr.length - 1;
+
             while(lt < rt) {
-                char tmp = charArray[lt];
-                charArray[lt] = charArray[rt];
-                charArray[rt] = tmp;
+                char tmp = charArr[lt];
+                charArr[lt] = charArr[rt];
+                charArr[rt] = tmp;
                 lt++;
                 rt--;
             }
-            list.add(String.valueOf(charArray));
+
+            list.add(String.valueOf(charArr));
         }
+
 
         return list;
     }
