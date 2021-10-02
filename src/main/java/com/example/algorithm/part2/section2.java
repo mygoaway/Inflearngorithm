@@ -22,9 +22,9 @@ public class section2 {
         int max = intArr[0];
 
         for(int i = 1; i < intArr.length; i++) {
-            if (intArr[i] > max) {
-                answer++;
+            if(intArr[i] > max) {
                 max = intArr[i];
+                answer++;
             }
         }
 

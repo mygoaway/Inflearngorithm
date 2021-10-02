@@ -23,22 +23,24 @@ public class section9 {
         int sum1 = 0; // 행의 합
         int sum2 = 0; //
 
-        for (int i = 0; i < intArr.length; i++) {
+        for(int i = 0; i < cnt; i++) {
             sum1=sum2=0;
-            for (int j = 0; j < intArr.length; j++){
+            for(int j = 0; j < cnt; j++) {
                 sum1 += intArr[i][j];
                 sum2 += intArr[j][i];
             }
-            answer = Math.max(answer, sum1);
-            answer = Math.max(answer, sum2);
+            answer = Math.max(sum1, answer);
+            answer = Math.max(sum2, answer);
         }
         sum1=sum2=0;
-        for(int i = 0; i < intArr.length; i++) {
-            sum1+=intArr[i][i];
-            sum2+=intArr[i][5-i-1];
+
+        for(int i = 0; i < cnt; i++) {
+            sum1 += intArr[i][5-i-1];
+            sum2 += intArr[i][i];
         }
-        answer = Math.max(answer, sum1);
-        answer = Math.max(answer, sum2);
+
+        answer = Math.max(sum1, answer);
+        answer = Math.max(sum2, answer);
 
         return answer;
     }

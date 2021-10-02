@@ -25,13 +25,13 @@ public class section6 {
         for(int i = 0; i < intArr.length; i++) {
             int tmp = intArr[i];
             int res = 0;
-            while ( tmp > 0 ) {
-                int t = tmp % 10;
-                res = res * 10 + t;
+            while(tmp > 0) {
+                int num = tmp % 10;
+                res = res * 10 + num;
                 tmp = tmp / 10;
             }
 
-            if(isPrime(res)) {
+            if(isPermit(res)) {
                 answer.add(res);
             }
         }
@@ -40,17 +40,17 @@ public class section6 {
         return answer;
     }
 
-    public boolean isPrime(int num) {
-        if(num == 1) {
+    private boolean isPermit(int res) {
+        if(res == 1) {
             return false;
         }
-
-        for(int i = 2; i < num; i++) {
-            if(num % i == 0) {
+        for(int i = 2; i < res; i++) {
+            if(res % i == 0) {
                 return false;
             }
         }
-
         return true;
     }
+
+
 }
