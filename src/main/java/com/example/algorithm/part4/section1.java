@@ -18,7 +18,6 @@ public class section1 {
 
     public char solution(int cnt, String str) {
         char answer = ' ';
-
         int max = Integer.MIN_VALUE;
         HashMap<Character, Integer> map = new HashMap<>();
 
@@ -26,11 +25,11 @@ public class section1 {
             map.put(x, map.getOrDefault(x, 0) + 1);
         }
 
-        for(char ch : map.keySet()) {
-            int check = map.get(ch);
-            if(check > max) {
-                max = map.get(ch);
-                answer = ch;
+        for(char x : map.keySet()) {
+            int size = map.get(x);
+            if(size > max) {
+                max = size;
+                answer = x;
             }
         }
 

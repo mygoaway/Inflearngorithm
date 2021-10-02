@@ -20,22 +20,18 @@ public class section5 {
 
     public int solution(int a, int b, int [] intArrA) {
         int answer = 0;
-        TreeSet<Integer> set = new TreeSet<>(Collections.reverseOrder());
+        TreeSet <Integer> set = new TreeSet<>(Collections.reverseOrder());
 
         for(int i = 0; i < a; i++) {
-            for(int j = i + 1; j < a; j++) {
+            for(int j = i+1; j < a; j++) {
                 for(int k = j+1; k < a; k++) {
                     set.add(intArrA[i] + intArrA[j] + intArrA[k]);
                 }
             }
         }
-        int cnt = 0;
-        for(int x : set) {
-            cnt++;
-            if(cnt == b) {
-                return x;
-            }
-        }
+
+        List <Integer> list = new ArrayList<>(set);
+        answer = list.get(b - 1);
 
         return answer;
     }
