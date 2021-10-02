@@ -29,12 +29,14 @@ public class section1 {
     public List<Integer> solution(int a, int b, int [] intArrA, int [] intArrB) {
         List<Integer> answer = new ArrayList<>();
 
-        int p1 = 0, p2 = 0;
+        int p1 = 0;
+        int p2 = 0;
+
         while(p1 < a && p2 < b) {
-            if(intArrA[p1] < intArrB[p2]) {
-                answer.add(intArrA[p1++]);
-            } else {
+            if(intArrA[p1] > intArrB[p2]) {
                 answer.add(intArrB[p2++]);
+            } else {
+                answer.add(intArrA[p1++]);
             }
         }
 

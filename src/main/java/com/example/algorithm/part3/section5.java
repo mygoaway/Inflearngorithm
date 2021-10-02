@@ -26,13 +26,15 @@ public class section5 {
             if(sum == cnt) {
                 answer++;
             }
+
             while(sum > cnt) {
                 sum -= intArr[lt++];
-                if(sum==cnt){
+                if(sum == cnt) {
                     answer++;
                 }
             }
         }
+
 
         return answer;
     }

@@ -21,9 +21,8 @@ public class section4 {
     public int solution(int a, int b, int [] intArrA) {
         int answer = 0;
         int sum = 0;
+
         int lt = 0;
-
-
         for(int rt = 0; rt < a; rt++) {
             sum += intArrA[rt];
 
@@ -31,7 +30,7 @@ public class section4 {
                 answer++;
             }
 
-            while(sum > b) {
+            if(sum > b) {
                 sum -= intArrA[lt++];
                 if(sum == b) {
                     answer++;

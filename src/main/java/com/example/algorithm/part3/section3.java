@@ -22,17 +22,24 @@ public class section3 {
 
     public int solution(int a, int b, int [] intArrA) {
         int answer = 0;
+        int max = Integer.MIN_VALUE;
         int sum = 0;
 
-        for(int i = 0; i < b; i++) {
+        for(int i = 0; i < b - 1; i++) {
             sum += intArrA[i];
         }
-        answer = sum;
 
-        for(int i = b; i < a; i++) {
-            sum += intArrA[i] - intArrA[i-b];
-            answer = Math.max(answer, sum);
+        int lt = 0;
+        for(int rt = b-1; rt < a; rt++) {
+            sum += intArrA[rt];
+            if(sum > max) {
+                max = sum;
+                answer =sum;
+            }
+            sum -= intArrA[lt];
+            lt++;
         }
+
 
         return answer;
     }
