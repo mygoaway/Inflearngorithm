@@ -14,18 +14,18 @@ public class section2 {
 
     public String solution(String str) {
         String answer = "";
-        Stack <Character> st = new Stack<>();
+        Stack <Character> stack = new Stack<>();
 
         for(char ch : str.toCharArray()) {
-            if(ch == ')') {
-                while(st.pop() != '(');
+            if(Character.isAlphabetic(ch) || ch == '(') {
+                stack.push(ch);
             } else {
-                st.push(ch);
+                while(stack.pop() != '(');
             }
         }
 
-        for(int i = 0; i < st.size(); i++) {
-            answer += st.get(i);
+        for(int i = 0; i < stack.size(); i++) {
+            answer += stack.get(i);
         }
 
         return answer;

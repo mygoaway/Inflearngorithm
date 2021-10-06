@@ -16,21 +16,18 @@ public class section1 {
         String answer = "YES";
 
         Stack st = new Stack();
-        char [] charArr = str.toCharArray();
 
-        for(int i = 0; i < charArr.length; i++){
-            if(charArr[i] == '(') {
-                st.push(charArr[i]);
-            } else
+        for(char ch : str.toCharArray()) {
+            if(ch == '(') {
+                st.push(ch);
+            } else {
                 if(st.isEmpty()) {
                     return "NO";
                 }
                 st.pop();
-           }
-
-        if(!st.empty()) {
-            return "NO";
+            }
         }
+
         return answer;
     }
 }
