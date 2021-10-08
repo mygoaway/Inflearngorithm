@@ -14,8 +14,7 @@ public class section1 {
 
     public String solution(String str) {
         String answer = "YES";
-
-        Stack st = new Stack();
+        Stack<Character> st = new Stack();
 
         for(char ch : str.toCharArray()) {
             if(ch == '(') {
@@ -26,6 +25,9 @@ public class section1 {
                 }
                 st.pop();
             }
+        }
+        if(!st.isEmpty()) {
+            return "NO";
         }
 
         return answer;

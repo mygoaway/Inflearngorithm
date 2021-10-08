@@ -35,7 +35,7 @@ public class section3 {
                 if(board[i][pos-1] != 0) {
                     int tmp = board[i][pos-1];
                     board[i][pos-1] = 0;
-                    if(!st.isEmpty() && tmp == st.peek()) {
+                    if(!st.isEmpty() && st.peek() == tmp) {
                         answer+=2;
                         st.pop();
                     } else {
@@ -45,6 +45,8 @@ public class section3 {
                 }
             }
         }
+
+
         return answer;
     }
 }
