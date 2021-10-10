@@ -6,13 +6,9 @@ public class section8 {
     public String solution(String str) {
         String answer ="NO";
 
-        str = str.toUpperCase().replaceAll("[^A-Z]", "");
+        str = str.toLowerCase().replaceAll("[^a-z]", "");
         String tmp = new StringBuilder(str).reverse().toString();
-
-        if(str.equals(tmp)) {
-            answer = "YES";
-        }
-
+        if(str.equals(tmp)) answer = "YES";
 
         return answer;
     }

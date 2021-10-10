@@ -7,27 +7,25 @@ public class section10 {
         int [] intArr = new int[str.length()];
 
         int num = 1000;
-        for(int i = 0; i < str.length(); i++) {
+        for(int i = 0; i < intArr.length; i++) {
             if(str.charAt(i) == ch) {
                 num = 0;
                 intArr[i] = num;
             } else {
-                num ++;
+                num++;
                 intArr[i] = num;
             }
         }
 
         num = 1000;
-        for(int i = str.length() - 1; i >= 0; i--) {
-            if(str.charAt(i) == ch) {
-                num = 0;
-            } else {
-                num ++;
-                intArr[i] = Math.min(intArr[i], num);
-            }
+        for(int j = intArr.length - 1; j >= 0; j--) {
+           if(str.charAt(j) == ch) {
+               num = 0;
+           } else {
+               num++;
+               intArr[j] = Math.min(intArr[j], num);
+           }
         }
-
-
 
         return intArr;
     }
