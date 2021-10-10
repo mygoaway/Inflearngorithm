@@ -11,7 +11,6 @@ public class section12 {
             int num = Integer.parseInt(tmp, 2);
             char ch = (char) num;
             answer += ch;
-
             str = str.substring(7);
         }
 
