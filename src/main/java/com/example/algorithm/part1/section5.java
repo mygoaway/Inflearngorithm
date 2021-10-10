@@ -5,16 +5,15 @@ import java.util.Scanner;
 
 public class section5 {
     public String solution(String str) {
+        String answer = "";
 
         char [] charArr = str.toCharArray();
-
         int lt = 0;
         int rt = charArr.length - 1;
-
-        while(lt < rt) {
+        for(int i = 0; i < charArr.length; i++) {
             if(!Character.isAlphabetic(charArr[lt])) {
                 lt++;
-            } else if(!Character.isAlphabetic(charArr[rt])) {
+            } else if (!Character.isAlphabetic(charArr[rt])) {
                 rt--;
             } else {
                 char tmp = charArr[lt];
@@ -24,9 +23,9 @@ public class section5 {
                 rt--;
             }
         }
+        answer = String.valueOf(charArr);
 
-
-        return String.valueOf(charArr);
+        return answer;
     }
 
     public static void main(String[] args) {

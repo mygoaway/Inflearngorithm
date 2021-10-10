@@ -5,15 +5,13 @@ public class section2 {
     public String solution(String str) {
         String answer = "";
 
-        for(int i = 0; i <str.length(); i++) {
-            char ch = str.charAt(i);
-            if(Character.isLowerCase(ch)) {
-                answer+= Character.toUpperCase(ch);
+        for(int i = 0; i < str.length(); i++) {
+            if(Character.isLowerCase(str.charAt(i))) {
+                answer += Character.toUpperCase(str.charAt(i));
             } else {
-                answer += Character.toLowerCase(ch);
+                answer += Character.toLowerCase(str.charAt(i));
             }
         }
-
 
         return answer;
     }

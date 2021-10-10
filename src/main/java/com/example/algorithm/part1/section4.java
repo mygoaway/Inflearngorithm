@@ -9,10 +9,8 @@ public class section4 {
 
         for(int i = 0; i < strArr.length; i++) {
             char [] charArr = strArr[i].toCharArray();
-
             int lt = 0;
             int rt = charArr.length - 1;
-
             while(lt < rt) {
                 char tmp = charArr[lt];
                 charArr[lt] = charArr[rt];
@@ -20,10 +18,8 @@ public class section4 {
                 lt++;
                 rt--;
             }
-
             list.add(String.valueOf(charArr));
         }
-
 
         return list;
     }
