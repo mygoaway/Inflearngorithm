@@ -35,7 +35,7 @@ public class section3 {
                 answer.add("D");
             } else if ( a== 1 && b == 3) {
                 answer.add("A");
-            } else if ( a==2 && b ==1) {
+            } else if ( a== 2 && b == 1) {
                 answer.add("A");
             } else if ( a== 3 && b == 2) {
                 answer.add("A");

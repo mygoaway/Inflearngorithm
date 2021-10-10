@@ -16,15 +16,11 @@ public class section4 {
     }
 
     public int [] solution(int cnt) {
-
         int [] intArr = new int[cnt];
+
         intArr[0] = 1;
         intArr[1] = 1;
-        for(int i = 2; i < cnt; i++) {
-            intArr[i] = intArr[i-1] + intArr[i-2];
-        }
-
-
+        for(int i = 2; i < cnt; i++) intArr[i] = intArr[i-1] + intArr[i-2];
 
         return intArr;
     }
