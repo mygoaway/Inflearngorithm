@@ -18,16 +18,19 @@ public class section2 {
         String answer = "YES";
         HashMap<Character, Integer> map = new HashMap<>();
 
-        for(char x : str1.toCharArray()) {
-            map.put(x, map.getOrDefault(x, 0) + 1);
+        for(char ch : str1.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
-        for(char k : str2.toCharArray()) {
-            if (!map.containsKey(k) || map.get(k) == 0) {
+        for(char ch : str2.toCharArray()) {
+            if(!map.containsKey(ch) || map.get(ch) == 0) {
                 return "NO";
             }
-            map.put(k, map.get(k) - 1);
+            map.put(ch, map.get(ch) - 1);
         }
+
+
+
         return answer;
     }
 }

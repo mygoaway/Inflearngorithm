@@ -41,13 +41,6 @@ public class section4 {
             }
             lt++;
         }
-
-
-
-
-
-
-
         return answer;
     }
 }

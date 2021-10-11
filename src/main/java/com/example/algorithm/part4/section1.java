@@ -21,15 +21,15 @@ public class section1 {
         int max = Integer.MIN_VALUE;
         HashMap<Character, Integer> map = new HashMap<>();
 
-        for(char x : str.toCharArray()) {
-            map.put(x, map.getOrDefault(x, 0) + 1);
+        for(char ch : str.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
-        for(char x : map.keySet()) {
-            int size = map.get(x);
-            if(size > max) {
-                max = size;
-                answer = x;
+        for(char ch : map.keySet()) {
+            int num = map.get(ch);
+            if(num > max) {
+                max = num;
+                answer = ch;
             }
         }
 
