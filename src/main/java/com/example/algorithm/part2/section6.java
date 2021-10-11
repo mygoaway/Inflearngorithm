@@ -30,27 +30,28 @@ public class section6 {
                 res = res * 10 + num;
                 tmp = tmp / 10;
             }
-
             if(isPermit(res)) {
                 answer.add(res);
             }
         }
 
-
         return answer;
     }
 
-    private boolean isPermit(int res) {
+    public boolean isPermit(int res) {
         if(res == 1) {
             return false;
         }
+
         for(int i = 2; i < res; i++) {
             if(res % i == 0) {
                 return false;
             }
         }
+
         return true;
     }
+
 
 
 }

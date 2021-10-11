@@ -13,8 +13,9 @@ public class section5 {
 
     public int solution(int cnt) {
         int answer = 0;
-        int n = cnt / 2 + 1;
-        int [] intArr = new int[n];
+
+        int num = cnt / 2 + 1;
+        int [] intArr = new int[num];
         for(int i = 0; i < intArr.length; i++) {
             intArr[i] = i + 1;
         }
@@ -26,7 +27,6 @@ public class section5 {
             if(sum == cnt) {
                 answer++;
             }
-
             while(sum > cnt) {
                 sum -= intArr[lt++];
                 if(sum == cnt) {
@@ -34,8 +34,7 @@ public class section5 {
                 }
             }
         }
-
-
+        
         return answer;
     }
 }

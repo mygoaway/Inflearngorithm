@@ -20,27 +20,31 @@ public class section9 {
 
     public int solution(int cnt, int [][] intArr) {
         int answer = Integer.MIN_VALUE;
-        int sum1 = 0; // 행의 합
-        int sum2 = 0; //
+        int answer1 = 0;
+        int answer2 = 0;
 
         for(int i = 0; i < cnt; i++) {
-            sum1=sum2=0;
+            answer1 = 0;
+            answer2 = 0;
+
             for(int j = 0; j < cnt; j++) {
-                sum1 += intArr[i][j];
-                sum2 += intArr[j][i];
+                answer1 += intArr[i][j];
+                answer2 += intArr[j][i];
             }
-            answer = Math.max(sum1, answer);
-            answer = Math.max(sum2, answer);
         }
-        sum1=sum2=0;
+        answer = Math.max(answer, answer1);
+        answer = Math.max(answer, answer2);
+
+        answer1 = 0;
+        answer2 = 0;
 
         for(int i = 0; i < cnt; i++) {
-            sum1 += intArr[i][5-i-1];
-            sum2 += intArr[i][i];
+            answer1 += intArr[i][i];
+            answer2 += intArr[i][5-1-i];
         }
 
-        answer = Math.max(sum1, answer);
-        answer = Math.max(sum2, answer);
+        answer = Math.max(answer, answer1);
+        answer = Math.max(answer, answer2);
 
         return answer;
     }

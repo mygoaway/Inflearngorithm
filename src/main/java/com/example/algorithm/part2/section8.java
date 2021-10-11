@@ -22,16 +22,14 @@ public class section8 {
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
 
-        for(int i = 0; i < cnt; i++) {
+        for(int i = 0; i < intArr.length; i++) {
             int num = 1;
-
-            for(int j = 0; j < cnt; j++) {
+            for(int j = 0; j < intArr.length; j++) {
                 if(intArr[j] > intArr[i]) {
                     num++;
                 }
             }
             answer.add(num);
-            num = 1;
         }
 
         return answer;

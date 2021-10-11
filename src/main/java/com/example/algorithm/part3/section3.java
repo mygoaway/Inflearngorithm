@@ -25,7 +25,7 @@ public class section3 {
         int max = Integer.MIN_VALUE;
         int sum = 0;
 
-        for(int i = 0; i < b - 1; i++) {
+        for(int i = 0; i < b-1; i++) {
             sum += intArrA[i];
         }
 
@@ -34,12 +34,10 @@ public class section3 {
             sum += intArrA[rt];
             if(sum > max) {
                 max = sum;
-                answer =sum;
+                answer = sum;
             }
-            sum -= intArrA[lt];
-            lt++;
+            sum -= intArrA[lt++];
         }
-
 
         return answer;
     }

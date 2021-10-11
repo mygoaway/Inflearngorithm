@@ -1,5 +1,7 @@
 package com.example.algorithm.part3;
 
+import sun.security.pkcs11.P11TlsKeyMaterialGenerator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -34,17 +36,21 @@ public class section1 {
 
         while(p1 < a && p2 < b) {
             if(intArrA[p1] > intArrB[p2]) {
-                answer.add(intArrB[p2++]);
+                answer.add(intArrB[p2]);
+                p2++;
             } else {
-                answer.add(intArrA[p1++]);
+                answer.add(intArrA[p1]);
+                p1++;
             }
         }
 
         while(p1 < a) {
-            answer.add(intArrA[p1++]);
+            answer.add(intArrA[p1]);
+            p1++;
         }
         while(p2 < b) {
-            answer.add(intArrB[p2++]);
+            answer.add(intArrB[p2]);
+            p2++;
         }
 
 

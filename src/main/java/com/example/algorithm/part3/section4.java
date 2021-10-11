@@ -25,12 +25,10 @@ public class section4 {
         int lt = 0;
         for(int rt = 0; rt < a; rt++) {
             sum += intArrA[rt];
-
             if(sum == b) {
                 answer++;
             }
-
-            if(sum > b) {
+            while(sum > b) {
                 sum -= intArrA[lt++];
                 if(sum == b) {
                     answer++;
