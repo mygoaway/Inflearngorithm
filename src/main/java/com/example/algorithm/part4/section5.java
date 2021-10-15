@@ -26,7 +26,6 @@ public class section5 {
             for(int j = i+1; j < intArrA.length; j++) {
                 for(int k = j+1; k < intArrA.length; k++) {
                     set.add(intArrA[i] + intArrA[j] + intArrA[k]);
-
                 }
             }
         }

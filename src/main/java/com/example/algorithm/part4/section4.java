@@ -35,12 +35,13 @@ public class section4 {
                 answer++;
             }
 
-            am.put(str1.charAt(lt), am.get(str1.charAt(lt)) -1);
+            am.put(str1.charAt(lt), am.get(str1.charAt(lt)) - 1);
             if(am.get(str1.charAt(lt)) == 0) {
                 am.remove(str1.charAt(lt));
             }
             lt++;
         }
+
         return answer;
     }
 }
