@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
+// 선택정렬
 public class section1 {
     public static void main(String[] args) {
         section1 se1 = new section1();
@@ -13,13 +14,15 @@ public class section1 {
         int cnt = scan.nextInt();
         int [] intArr= new int[cnt];
         for(int i = 0; i < cnt; i++) intArr[i] = scan.nextInt();
-        System.out.print(se1.solution(intArr));
+        for(int x : se1.solution(cnt, intArr)) {
+            System.out.print(x+" ");
+        }
     }
 
-    public int [] solution(int [] intArr) {
-        for(int i = 0; i < intArr.length - 1; i++) {
+    public int [] solution(int cnt, int [] intArr) {
+        for(int i = 0; i < cnt -1; i++) {
             int idx = i;
-            for(int j = i+1; j < intArr.length; j++) {
+            for(int j = i+1; j < cnt; j++) {
                 if(intArr[j] < intArr[idx]) {
                     idx = j;
                 }
@@ -28,7 +31,6 @@ public class section1 {
             intArr[i] = intArr[idx];
             intArr[idx] = tmp;
         }
-
         return intArr;
     }
 }

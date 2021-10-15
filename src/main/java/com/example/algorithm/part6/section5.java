@@ -1,5 +1,6 @@
 package com.example.algorithm.part6;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -26,7 +27,6 @@ public class section5 {
                 return "D";
             }
         }
-
         return answer;
     }
 }

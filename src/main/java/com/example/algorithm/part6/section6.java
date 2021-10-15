@@ -22,6 +22,7 @@ public class section6 {
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
 
+        // clone() 메서드는 객체를 복사하는 메서드
         int [] tmp = intArr.clone();
         Arrays.sort(tmp);
 

@@ -7,15 +7,14 @@ public class section7 {
     public static void main(String[] args) {
         section7 se1 = new section7();
         Scanner scan = new Scanner(System.in);
-
         int cnt = scan.nextInt();
-        List<Point> arr = new ArrayList<>();
+        List<Point> list = new ArrayList<>();
         for(int i = 0; i < cnt; i++) {
-            arr.add(new Point(scan.nextInt(), scan.nextInt()));
+            list.add(new Point(scan.nextInt(), scan.nextInt()));
         }
-        Collections.sort(arr);
-        for(Point o : arr) {
-            System.out.println(o.x + " " + o.y);
+        Collections.sort(list);
+        for(Point p : list) {
+            System.out.println(p.x +" " + p.y);
         }
     }
 }
@@ -32,9 +31,9 @@ class Point implements Comparable<Point>{
     @Override
     public int compareTo(Point o) {
         if(this.x == o.x) {
-            return this.y-o.y;
+            return this.y - o.y;
         } else {
-            return this.x-o.x;
+            return this.x - o.x;
         }
     }
 }
