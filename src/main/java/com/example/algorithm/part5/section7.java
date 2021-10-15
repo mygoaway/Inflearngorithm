@@ -23,13 +23,12 @@ public class section7 {
             q.offer(criteria.charAt(i));
         }
 
-        for(char x : str.toCharArray()) {
-            if(q.contains(x)) {
-                // 필수과목
-                if(x!= q.poll()) {
-                    return "NO";
-                }
-            }
+        for(char ch : str.toCharArray()) {
+           if(q.contains(ch)) {
+               if(ch != q.poll()) {
+                   return "NO";
+               }
+           }
         }
 
         if(!q.isEmpty()) {

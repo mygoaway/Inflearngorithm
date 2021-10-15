@@ -14,19 +14,20 @@ public class section1 {
 
     public String solution(String str) {
         String answer = "YES";
-        Stack<Character> st = new Stack();
+        Stack<Character> stack = new Stack();
 
         for(char ch : str.toCharArray()) {
             if(ch == '(') {
-                st.push(ch);
+                stack.push(ch);
             } else {
-                if(st.isEmpty()) {
+                if(stack.isEmpty()) {
                     return "NO";
                 }
-                st.pop();
+                stack.pop();
             }
         }
-        if(!st.isEmpty()) {
+
+        if(!stack.isEmpty()) {
             return "NO";
         }
 

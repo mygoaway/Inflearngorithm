@@ -32,24 +32,24 @@ public class section8 {
 
     public int solution(int cnt, int people, int [] intArr) {
         int answer = 0;
-        Queue<Person> Q = new LinkedList<>();
+        Queue<Person> q = new LinkedList<>();
         for(int i = 0; i < cnt; i ++) {
-            Q.offer(new Person(i, intArr[i]));
+            q.offer(new Person(i, intArr[i]));
         }
 
-        while(!Q.isEmpty()) {
-            Person tmp = Q.poll();
-            for(Person x : Q) {
-                if(x.priority > tmp.priority) {
-                    Q.offer(tmp);
-                    tmp = null;
+        while(!q.isEmpty()) {
+            Person p = q.poll();
+            for( Person x : q) {
+                if(x.priority > p.priority) {
+                    q.offer(p);
+                    p = null;
                     break;
                 }
             }
 
-            if(tmp != null) {
+            if(p != null) {
                 answer++;
-                if(tmp.id == people) {
+                if(p.id == people) {
                     return answer;
                 }
             }

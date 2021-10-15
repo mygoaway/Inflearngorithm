@@ -14,8 +14,8 @@ public class section4 {
 
     public int solution(String str) {
         int answer = 0;
-
         Stack<Integer> st = new Stack();
+
         for(char ch : str.toCharArray()) {
             if(Character.isDigit(ch)) {
                 st.push(ch-48);
@@ -24,9 +24,9 @@ public class section4 {
                 int lt = st.pop();
                 if(ch == '+') {
                     st.push(lt+rt);
-                } else if ( ch=='-') {
+                } else if ( ch== '-') {
                     st.push(lt-rt);
-                } else if ( ch=='*') {
+                } else if (ch == '*') {
                     st.push(lt*rt);
                 } else {
                     st.push(lt/rt);
