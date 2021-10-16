@@ -23,6 +23,7 @@ public class section2 {
                 while(stack.pop() != '(');
             }
         }
+
         for(int i = 0; i < stack.size(); i++) {
             answer += stack.get(i);
         }

@@ -29,18 +29,19 @@ public class section4 {
 
         int lt = 0;
         for(int rt = str2.length() - 1; rt < str1.length(); rt++) {
-            am.put(str1.charAt(rt), am.getOrDefault(str1.charAt(rt), 0) + 1);
+            am.put(str1.charAt(rt), am.getOrDefault(str1.charAt(rt), 0 ) + 1);
 
             if(am.equals(bm)) {
                 answer++;
             }
 
-            am.put(str1.charAt(lt), am.get(str1.charAt(lt)) - 1);
+            am.put(str1.charAt(lt), am.get(str1.charAt(lt))-1);
             if(am.get(str1.charAt(lt)) == 0) {
                 am.remove(str1.charAt(lt));
             }
             lt++;
         }
+
 
         return answer;
     }

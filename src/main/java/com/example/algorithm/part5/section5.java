@@ -16,6 +16,7 @@ public class section5 {
         int answer = 0;
         Stack<Character> st = new Stack();
 
+
         for(int i = 0; i < str.length(); i++) {
             if(str.charAt(i) == '(') {
                 st.push(str.charAt(i));
@@ -23,12 +24,11 @@ public class section5 {
                 st.pop();
                 if(str.charAt(i-1) == '(') {
                     answer += st.size();
-                }  else {
+                } else {
                     answer += 1;
                 }
             }
         }
-
         return answer;
     }
 }

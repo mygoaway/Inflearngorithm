@@ -24,11 +24,11 @@ public class section7 {
         }
 
         for(char ch : str.toCharArray()) {
-           if(q.contains(ch)) {
-               if(ch != q.poll()) {
-                   return "NO";
-               }
-           }
+            if(q.contains(ch)) {
+                if(ch != q.poll()) {
+                    return "NO";
+                }
+            }
         }
 
         if(!q.isEmpty()) {

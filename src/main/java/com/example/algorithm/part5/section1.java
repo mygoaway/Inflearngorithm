@@ -31,6 +31,7 @@ public class section1 {
             return "NO";
         }
 
+
         return answer;
     }
 }

@@ -18,8 +18,8 @@ public class section6 {
 
     public int solution(int people, int cnt) {
         int answer = 0;
-
         Queue<Integer> q = new LinkedList<>();
+
         for(int i = 0; i < people; i++) {
             q.offer(i+1);
         }
@@ -33,7 +33,6 @@ public class section6 {
                 answer = q.poll();
             }
         }
-
 
         return answer;
     }

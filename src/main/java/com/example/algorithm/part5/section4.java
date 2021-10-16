@@ -24,7 +24,7 @@ public class section4 {
                 int lt = st.pop();
                 if(ch == '+') {
                     st.push(lt+rt);
-                } else if ( ch== '-') {
+                } else if (ch == '-') {
                     st.push(lt-rt);
                 } else if (ch == '*') {
                     st.push(lt*rt);
@@ -33,8 +33,7 @@ public class section4 {
                 }
             }
         }
-
-        answer = st.get(0);
+        answer = st.pop();
         return answer;
     }
 }
