@@ -20,7 +20,6 @@ public class section1 {
     }
 
     public int [] solution(int cnt, int [] intArr) {
-
         for(int i = 0; i < cnt - 1; i++) {
             int idx = i;
             for(int j = i + 1; j < cnt; j++) {
@@ -32,8 +31,6 @@ public class section1 {
             intArr[i] = intArr[idx];
             intArr[idx] = tmp;
         }
-
-
         return intArr;
     }
 }

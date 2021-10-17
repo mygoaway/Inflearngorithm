@@ -20,13 +20,14 @@ public class section5 {
 
     public String solution(int cnt, int [] intArr) {
         String answer = "U";
-        Arrays.sort(intArr);
 
+        Arrays.sort(intArr);
         for(int i = 0; i < cnt - 1; i++) {
             if(intArr[i] == intArr[i+1]) {
                 return "D";
             }
         }
+
         return answer;
     }
 }

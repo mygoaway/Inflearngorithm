@@ -22,14 +22,14 @@ public class section4 {
 
         for(int x : intArr) {
             int pos = -1;
-            for(int i = 0; i < size; i++) {
-                if(cache[i] == x) {
+            for(int i = 0; i < cache.length; i++) {
+                if(x == cache[i]) {
                     pos = i;
                 }
             }
 
             if(pos == -1) {
-                for(int i = size-1; i >= 1; i--) {
+                for(int i = size - 1; i >= 1; i--) {
                     cache[i] = cache[i-1];
                 }
             } else {

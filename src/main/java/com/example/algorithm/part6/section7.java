@@ -13,13 +13,14 @@ public class section7 {
             list.add(new Point(scan.nextInt(), scan.nextInt()));
         }
         Collections.sort(list);
-        for(Point p : list) {
-            System.out.println(p.x +" " + p.y);
+        for(Point point : list) {
+            System.out.println(point.x + " " + point.y);
         }
     }
 }
 
-class Point implements Comparable<Point>{
+
+class Point implements Comparable<Point> {
     public int x;
     public int y;
 

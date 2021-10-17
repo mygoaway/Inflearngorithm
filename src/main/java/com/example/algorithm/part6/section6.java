@@ -22,12 +22,11 @@ public class section6 {
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
 
-        // clone() 메서드는 객체를 복사하는 메서드
-        int [] tmp = intArr.clone();
-        Arrays.sort(tmp);
+        int [] tmpArr = intArr.clone();
+        Arrays.sort(tmpArr);
 
         for(int i = 0; i < cnt; i++) {
-            if(intArr[i] != tmp[i]) {
+            if(intArr[i] != tmpArr[i]) {
                 answer.add(i+1);
             }
         }
