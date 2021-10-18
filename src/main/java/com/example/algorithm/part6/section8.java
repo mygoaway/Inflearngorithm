@@ -22,7 +22,6 @@ public class section8 {
     public int solution(int cnt, int num, int [] intArr) {
         int answer = 0;
         Arrays.sort(intArr);
-
         // 이분검색은 정렬이 되어있어야 함!
         int lt = 0;
         int rt = cnt - 1;
