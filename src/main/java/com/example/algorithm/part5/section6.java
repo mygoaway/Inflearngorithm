@@ -23,7 +23,6 @@ public class section6 {
         for(int i = 0; i < people; i++) {
             q.offer(i+1);
         }
-
         while(!q.isEmpty()) {
             for(int i = 0; i < cnt - 1; i++) {
                 q.offer(q.poll());

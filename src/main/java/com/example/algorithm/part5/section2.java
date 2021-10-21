@@ -24,8 +24,8 @@ public class section2 {
             }
         }
 
-        for(int i = 0; i < stack.size(); i++) {
-            answer += stack.get(i);
+        for(char ch : stack) {
+            answer += ch;
         }
 
         return answer;

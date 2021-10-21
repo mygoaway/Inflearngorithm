@@ -17,10 +17,10 @@ public class section7 {
 
     public String solution(String criteria, String str) {
         String answer = "YES";
-
         Queue<Character> q = new LinkedList<>();
-        for(int i = 0; i < criteria.length(); i++) {
-            q.offer(criteria.charAt(i));
+
+        for(char ch : criteria.toCharArray()) {
+            q.offer(ch);
         }
 
         for(char ch : str.toCharArray()) {
@@ -31,9 +31,6 @@ public class section7 {
             }
         }
 
-        if(!q.isEmpty()) {
-            return "NO";
-        }
 
         return answer;
     }

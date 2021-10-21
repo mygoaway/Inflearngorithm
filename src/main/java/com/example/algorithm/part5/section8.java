@@ -35,26 +35,28 @@ public class section8 {
         Queue<Person> q = new LinkedList<>();
 
         for(int i = 0; i < cnt; i++) {
-            q.offer(new Person(i,intArr[i]));
+            q.offer(new Person(i, intArr[i]));
         }
 
-        while(!q.isEmpty()) {
-            Person p = q.poll();
-            for(Person x : q) {
-                if(x.priority > p.priority) {
-                    q.offer(p);
-                    p = null;
+        while(!q.isEmpty()){
+            Person person = q.poll();
+            for(Person p : q) {
+                if(p.priority > person.priority) {
+                    q.offer(person);
+                    person = null;
                     break;
                 }
             }
 
-            if(p != null) {
+            if(person != null) {
                 answer++;
-                if(p.id == people) {
+                if(person.id == people) {
                     return answer;
                 }
             }
         }
+
+
 
         return answer;
     }

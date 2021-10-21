@@ -30,15 +30,14 @@ public class section3 {
         int answer = 0;
         Stack <Integer> st = new Stack<>();
 
-
-        for(int pos : moves) {
+        for(int x : moves) {
             for(int i = 0; i < board.length; i++) {
-                if(board[i][pos-1] != 0) {
-                    int tmp = board[i][pos-1];
-                    board[i][pos-1] = 0;
+                if(board[i][x-1] != 0) {
+                    int tmp = board[i][x-1];
+                    board[i][x-1] = 0;
                     if(!st.isEmpty() && st.peek() == tmp) {
-                        answer+=2;
                         st.pop();
+                        answer +=2;
                     } else {
                         st.push(tmp);
                     }
@@ -46,7 +45,6 @@ public class section3 {
                 }
             }
         }
-
 
 
         return answer;
