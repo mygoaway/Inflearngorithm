@@ -22,15 +22,13 @@ public class section8 {
     public int solution(int cnt, int num, int [] intArr) {
         int answer = 0;
         Arrays.sort(intArr);
-        // 이분검색은 정렬이 되어있어야 함!
+
         int lt = 0;
         int rt = cnt - 1;
-
         while(lt <= rt) {
-            int mid = (lt + rt) / 2;
+            int mid = (lt+rt) / 2;
             if(intArr[mid] == num) {
                 answer = mid+1;
-                break;
             }
             if(intArr[mid] > num) {
                 rt = mid - 1;
@@ -38,8 +36,6 @@ public class section8 {
                 lt = mid + 1;
             }
         }
-
-
 
         return answer;
     }

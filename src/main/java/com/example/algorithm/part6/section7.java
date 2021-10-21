@@ -9,16 +9,16 @@ public class section7 {
         Scanner scan = new Scanner(System.in);
         int cnt = scan.nextInt();
         List<Point> list = new ArrayList<>();
+
         for(int i = 0; i < cnt; i++) {
             list.add(new Point(scan.nextInt(), scan.nextInt()));
         }
         Collections.sort(list);
-        for(Point point : list) {
-            System.out.println(point.x + " " + point.y);
+        for(Point p : list) {
+            System.out.println(p.x + " " + p.y);
         }
     }
 }
-
 
 class Point implements Comparable<Point> {
     public int x;

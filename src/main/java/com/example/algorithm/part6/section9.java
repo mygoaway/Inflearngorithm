@@ -23,7 +23,7 @@ public class section9 {
         int lt = Arrays.stream(intArr).max().getAsInt();
         int rt = Arrays.stream(intArr).sum();
 
-        while(lt <= rt){
+        while(lt <= rt) {
             int mid = (lt+rt) / 2;
             if(check(intArr, mid) <= 3) {
                 answer = mid;
@@ -45,10 +45,12 @@ public class section9 {
                 cnt++;
                 sum = x;
             } else {
-                sum +=x;
+                sum += x;
             }
         }
 
         return cnt;
     }
+
+
 }

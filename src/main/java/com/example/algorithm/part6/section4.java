@@ -19,7 +19,6 @@ public class section4 {
 
     public int [] solution(int size, int cnt, int [] intArr) {
         int [] cache = new int[size];
-
         for(int x : intArr) {
             int pos = -1;
             for(int i = 0; i < cache.length; i++) {

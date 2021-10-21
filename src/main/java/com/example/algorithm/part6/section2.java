@@ -19,13 +19,14 @@ public class section2 {
     public int [] solution(int cnt, int [] intArr) {
         for(int i = 0; i < cnt - 1; i++) {
             for(int j = 0; j < cnt - 1 - i; j++) {
-                if(intArr[i] > intArr[i+1]){
-                    int tmp = intArr[i];
-                    intArr[i] = intArr[i+1];
-                    intArr[i+1] = tmp;
+                if(intArr[j] > intArr[j+1]) {
+                    int tmp = intArr[j];
+                    intArr[j] = intArr[j+1];
+                    intArr[j+1] = tmp;
                 }
             }
         }
+
         return intArr;
     }
 }

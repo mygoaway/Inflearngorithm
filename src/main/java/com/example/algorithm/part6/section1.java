@@ -31,6 +31,8 @@ public class section1 {
             intArr[i] = intArr[idx];
             intArr[idx] = tmp;
         }
+
+
         return intArr;
     }
 }
