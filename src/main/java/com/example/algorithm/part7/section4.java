@@ -11,18 +11,18 @@ public class section4 {
         int n = 10;
         fibo = new int[n+1];
         se1.dfs(n);
-        for(int i = 1; i <= n; i++) {
-            System.out.print(fibo[i] + " ");
+        for(int x : fibo) {
+            System.out.print(x + " ");
         }
     }
 
     public int dfs(int n) {
         if(n == 1) {
-            return fibo[n]=1;
-        } else if ( n == 2){
-            return fibo[n]=1;
+            return fibo[n] = 1;
+        } else if (n== 2) {
+            return fibo[n] = 1;
         } else {
-            return fibo[n] = dfs(n-2)+dfs(n-1);
+            return fibo[n] = dfs(n-1) + dfs(n-2);
         }
     }
 }
