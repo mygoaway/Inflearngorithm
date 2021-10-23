@@ -10,21 +10,21 @@ public class section5 {
         char [] charArr = str.toCharArray();
         int lt = 0;
         int rt = charArr.length - 1;
-        for(int i = 0; i < charArr.length; i++) {
+        while(lt < rt) {
             if(!Character.isAlphabetic(charArr[lt])) {
                 lt++;
             } else if (!Character.isAlphabetic(charArr[rt])) {
                 rt--;
             } else {
-                char tmp = charArr[lt];
+                char ch = charArr[lt];
                 charArr[lt] = charArr[rt];
-                charArr[rt] = tmp;
+                charArr[rt] = ch;
                 lt++;
                 rt--;
             }
         }
-        answer = String.valueOf(charArr);
 
+        answer = String.valueOf(charArr);
         return answer;
     }
 

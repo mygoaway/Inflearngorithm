@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class section3 {
     public String solution(String str) {
         String answer = "";
-
         int max = Integer.MIN_VALUE;
+
         String [] strArr = str.split(" ");
-        for(int i = 0; i < strArr.length; i++) {
-            int len = strArr[i].length();
+        for(String s : strArr) {
+            int len = s.length();
             if(len > max) {
                 max = len;
-                answer = strArr[i];
+                answer = s;
             }
         }
 

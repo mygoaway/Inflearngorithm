@@ -8,8 +8,8 @@ public class section1 {
         int answer = 0;
 
         str = str.toLowerCase();
-        for(int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == t) {
+        for(char ch : str.toCharArray()) {
+            if(ch == t) {
                 answer++;
             }
         }

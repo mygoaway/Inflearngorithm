@@ -6,8 +6,10 @@ public class section9 {
     public int solution(String str) {
         String answer = "";
 
-        for(int i = 0; i < str.length(); i++) {
-            if(Character.isDigit(str.charAt(i))) answer += str.charAt(i);
+        for(char ch : str.toCharArray()) {
+            if(Character.isDigit(ch)) {
+                answer += ch;
+            }
         }
 
         int result = Integer.parseInt(answer);

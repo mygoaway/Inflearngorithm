@@ -13,8 +13,6 @@ public class section12 {
             answer += ch;
             str = str.substring(7);
         }
-
-
         return answer;
     }
 

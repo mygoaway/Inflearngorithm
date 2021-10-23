@@ -5,27 +5,30 @@ import java.util.Scanner;
 public class section10 {
     public int [] solution(String str, char ch) {
         int [] intArr = new int[str.length()];
+        int len = 1000;
 
-        int num = 1000;
-        for(int i = 0; i < intArr.length; i++) {
+        for(int i = 0; i < str.length(); i++) {
             if(str.charAt(i) == ch) {
-                num = 0;
-                intArr[i] = num;
+                len = 0;
+                intArr[i] = len;
             } else {
-                num++;
-                intArr[i] = num;
+                len++;
+                intArr[i] = len;
             }
         }
 
-        num = 1000;
-        for(int j = intArr.length - 1; j >= 0; j--) {
-           if(str.charAt(j) == ch) {
-               num = 0;
-           } else {
-               num++;
-               intArr[j] = Math.min(intArr[j], num);
-           }
+        len = 1000;
+
+        for(int i = str.length() - 1; i >= 0; i--) {
+            if(str.charAt(i) == ch) {
+                len = 0;
+            } else {
+                len++;
+                intArr[i] = Math.min(intArr[i], len);
+            }
         }
+
+
 
         return intArr;
     }
