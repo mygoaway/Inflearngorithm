@@ -28,13 +28,14 @@ public class section4 {
             if(sum == b) {
                 answer++;
             }
-            while(sum > b) {
+            while(sum > b){
                 sum -= intArrA[lt++];
-                if(sum == b) {
+                if(sum == b){
                     answer++;
                 }
             }
         }
+
 
 
         return answer;

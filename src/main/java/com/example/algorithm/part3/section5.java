@@ -13,20 +13,22 @@ public class section5 {
 
     public int solution(int cnt) {
         int answer = 0;
+        int sum = 0;
 
         int num = cnt / 2 + 1;
         int [] intArr = new int[num];
         for(int i = 0; i < intArr.length; i++) {
-            intArr[i] = i + 1;
+            intArr[i] = i+1;
         }
 
-        int sum = 0;
         int lt = 0;
         for(int rt = 0; rt < intArr.length; rt++) {
             sum += intArr[rt];
+
             if(sum == cnt) {
                 answer++;
             }
+
             while(sum > cnt) {
                 sum -= intArr[lt++];
                 if(sum == cnt) {

@@ -35,12 +35,12 @@ public class section1 {
         int p2 = 0;
 
         while(p1 < a && p2 < b) {
-            if(intArrA[p1] > intArrB[p2]) {
-                answer.add(intArrB[p2]);
-                p2++;
-            } else {
+            if(intArrA[p1] < intArrB[p2]) {
                 answer.add(intArrA[p1]);
                 p1++;
+            } else {
+                answer.add(intArrB[p2]);
+                p2++;
             }
         }
 
@@ -48,11 +48,11 @@ public class section1 {
             answer.add(intArrA[p1]);
             p1++;
         }
+
         while(p2 < b) {
             answer.add(intArrB[p2]);
             p2++;
         }
-
 
         return answer;
     }
