@@ -13,7 +13,6 @@ public class section8 {
         for (int i = 0; i < intArr.length; i++) {
             intArr[i] = scan.nextInt();
         }
-
         for (int x : se3.solution(cnt, intArr)) {
             System.out.print(x + " ");
         }
@@ -25,15 +24,12 @@ public class section8 {
         for(int i = 0; i < intArr.length; i++) {
             int num = 1;
             for(int j = 0; j < intArr.length; j++) {
-                if(intArr[j] > intArr[i]) {
-                    num++;
-                }
+               if(intArr[i] < intArr[j]) {
+                   num++;
+               }
             }
             answer.add(num);
         }
-
         return answer;
     }
-
-
 }

@@ -13,23 +13,21 @@ public class section7 {
         for (int i = 0; i < intArr.length; i++) {
             intArr[i] = scan.nextInt();
         }
-
         System.out.println(se3.solution(cnt, intArr));
     }
 
     public int solution(int cnt, int [] intArr) {
-        int answer = 0, num = 0;
+        int sum = 0, num = 0;
 
-        for(int i = 0; i < cnt; i++) {
-            if(intArr[i] == 1) {
+        for(int x : intArr) {
+            if( x == 1) {
                 num++;
-                answer += num;
+                sum += num;
             } else {
-                num=0;
+                num = 0;
             }
         }
 
-        return answer;
+        return sum;
     }
-
 }

@@ -19,12 +19,12 @@ public class section2 {
 
     public int solution(int [] intArr) {
         int answer = 1;
-        int max = intArr[0];
+        int max = Integer.MIN_VALUE;
 
         for(int i = 1; i < intArr.length; i++) {
             if(intArr[i] > max) {
-                answer++;
                 max = intArr[i];
+                answer++;
             }
         }
 
