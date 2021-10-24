@@ -32,7 +32,6 @@ public class section9 {
                 lt = mid + 1;
             }
         }
-
         return answer;
     }
 

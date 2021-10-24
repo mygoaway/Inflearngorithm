@@ -19,6 +19,7 @@ public class section4 {
 
     public int [] solution(int size, int cnt, int [] intArr) {
         int [] cache = new int[size];
+
         for(int x : intArr) {
             int pos = -1;
             for(int i = 0; i < cache.length; i++) {
@@ -28,11 +29,11 @@ public class section4 {
             }
 
             if(pos == -1) {
-                for(int i = size - 1; i >= 1; i--) {
+                for(int i = size-1; i >= 1; i--) {
                     cache[i] = cache[i-1];
                 }
             } else {
-                for(int i = pos; i >= 1; i--) {
+                for(int i = pos; i>=1; i--) {
                     cache[i] = cache[i-1];
                 }
             }

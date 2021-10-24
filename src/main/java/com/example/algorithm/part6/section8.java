@@ -24,16 +24,16 @@ public class section8 {
         Arrays.sort(intArr);
 
         int lt = 0;
-        int rt = cnt - 1;
-        while(lt <= rt) {
+        int rt = cnt -1;
+        while (lt <= rt) {
             int mid = (lt+rt) / 2;
             if(intArr[mid] == num) {
                 answer = mid+1;
             }
-            if(intArr[mid] > num) {
-                rt = mid - 1;
+            if (intArr[mid] > num) {
+                rt = mid-1;
             } else {
-                lt = mid + 1;
+                lt = mid+1;
             }
         }
 

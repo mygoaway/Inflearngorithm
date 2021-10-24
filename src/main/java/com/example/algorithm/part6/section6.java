@@ -25,7 +25,7 @@ public class section6 {
         int [] tmp = intArr.clone();
         Arrays.sort(tmp);
 
-        for(int i = 0; i < cnt - 1; i++) {
+        for(int i = 0 ; i < cnt; i++) {
             if(intArr[i] != tmp[i]) {
                 answer.add(i+1);
             }

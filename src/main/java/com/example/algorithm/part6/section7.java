@@ -9,7 +9,6 @@ public class section7 {
         Scanner scan = new Scanner(System.in);
         int cnt = scan.nextInt();
         List<Point> list = new ArrayList<>();
-
         for(int i = 0; i < cnt; i++) {
             list.add(new Point(scan.nextInt(), scan.nextInt()));
         }
