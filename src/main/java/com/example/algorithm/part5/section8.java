@@ -3,14 +3,13 @@ package com.example.algorithm.part5;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-import java.util.Stack;
 
-class Person {
-    int id;
+class Person{
+    int num;
     int priority;
 
-    public Person(int id, int priority) {
-        this.id = id;
+    public Person(int num, int priority) {
+        this.num = num;
         this.priority = priority;
     }
 }
@@ -34,23 +33,23 @@ public class section8 {
         int answer = 0;
         Queue<Person> q = new LinkedList<>();
 
-        for(int i = 0; i < cnt; i++) {
+        for(int i = 0 ; i < cnt; i++) {
             q.offer(new Person(i, intArr[i]));
         }
 
-        while(!q.isEmpty()){
-            Person person = q.poll();
-            for(Person p : q) {
-                if(p.priority > person.priority) {
-                    q.offer(person);
-                    person = null;
+        while (!q.isEmpty()) {
+            Person p = q.poll();
+            for(Person x : q) {
+                if(x.priority > p.priority) {
+                    q.offer(p);
+                    p = null;
                     break;
                 }
             }
 
-            if(person != null) {
+            if(p != null) {
                 answer++;
-                if(person.id == people) {
+                if(p.num == people) {
                     return answer;
                 }
             }

@@ -28,18 +28,18 @@ public class section3 {
 
     public int solution(int [][] board, int [] moves) {
         int answer = 0;
-        Stack <Integer> st = new Stack<>();
+        Stack <Integer> stack = new Stack<>();
 
-        for(int x : moves) {
+        for(int pos : moves) {
             for(int i = 0; i < board.length; i++) {
-                if(board[i][x-1] != 0) {
-                    int tmp = board[i][x-1];
-                    board[i][x-1] = 0;
-                    if(!st.isEmpty() && st.peek() == tmp) {
-                        st.pop();
-                        answer +=2;
+                if(board[i][pos-1] != 0) {
+                    int tmp = board[i][pos-1];
+                    board[i][pos-1] = 0;
+                    if(!stack.isEmpty() && stack.peek() == tmp) {
+                        answer += 2;
+                        stack.pop();
                     } else {
-                        st.push(tmp);
+                        stack.push(tmp);
                     }
                     break;
                 }

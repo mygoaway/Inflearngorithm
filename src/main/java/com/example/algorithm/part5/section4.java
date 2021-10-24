@@ -22,12 +22,12 @@ public class section4 {
             } else {
                 int rt = st.pop();
                 int lt = st.pop();
-                if(ch =='+') {
+                if(ch == '+') {
                     st.push(lt+rt);
-                } else if(ch=='*') {
-                    st.push(lt*rt);
-                } else if (ch=='-') {
+                } else if ( ch=='-') {
                     st.push(lt-rt);
+                } else if ( ch=='*') {
+                    st.push(lt*rt);
                 } else {
                     st.push(lt/rt);
                 }

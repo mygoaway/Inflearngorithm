@@ -27,10 +27,10 @@ public class section1 {
             }
         }
 
+
         if(!stack.isEmpty()) {
             return "NO";
         }
-
         return answer;
     }
 }
