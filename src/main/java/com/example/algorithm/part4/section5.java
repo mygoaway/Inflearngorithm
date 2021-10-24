@@ -22,16 +22,17 @@ public class section5 {
         int answer = 0;
         TreeSet <Integer> set = new TreeSet<>(Collections.reverseOrder());
 
-        for(int i = 0; i < intArrA.length; i++) {
-            for(int j = i+1; j < intArrA.length; j++) {
-                for(int k = j+1; k < intArrA.length; k++) {
-                    set.add(intArrA[i] + intArrA[j] + intArrA[k]);
+        for(int i = 0; i < a; i++) {
+            for(int j = i+1; j < a; j++) {
+                for(int k = j+1; k < a; k++) {
+                    set.add(intArrA[i]+intArrA[j]+intArrA[k]);
                 }
             }
         }
 
-        List<Integer>list = new ArrayList<>(set);
+        List<Integer> list = new ArrayList<>(set);
         answer = list.get(b-1);
+
         return answer;
     }
 }

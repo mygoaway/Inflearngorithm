@@ -1,6 +1,7 @@
 package com.example.algorithm.part4;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class section4 {
@@ -17,29 +18,30 @@ public class section4 {
     public int solution(String str1, String str2) {
         int answer = 0;
 
-        HashMap<Character, Integer> bm = new HashMap<>();
-        for(char x : str2.toCharArray()) {
-            bm.put(x, bm.getOrDefault(x, 0) + 1);
+        Map<Character, Integer> map2 = new HashMap<>();
+        for(int i = 0; i < str2.length(); i++) {
+            map2.put(str2.charAt(i), map2.getOrDefault(str2.charAt(i), 0) + 1);
         }
 
-        HashMap<Character, Integer> am = new HashMap<>();
+        Map<Character, Integer> map1 = new HashMap<>();
         for(int i = 0; i < str2.length() - 1; i++) {
-            am.put(str1.charAt(i), am.getOrDefault(str1.charAt(i), 0) + 1);
+            map1.put(str1.charAt(i), map1.getOrDefault(str1.charAt(i), 0) + 1);
         }
 
         int lt = 0;
         for(int rt = str2.length() - 1; rt < str1.length(); rt++) {
-            am.put(str1.charAt(rt), am.getOrDefault(str1.charAt(rt), 0 ) + 1);
+            map1.put(str1.charAt(rt), map1.getOrDefault(str1.charAt(rt), 0) + 1);
 
-            if(am.equals(bm)) {
+            if(map1.equals(map2)) {
                 answer++;
             }
 
-            am.put(str1.charAt(lt), am.get(str1.charAt(lt))-1);
-            if(am.get(str1.charAt(lt)) == 0) {
-                am.remove(str1.charAt(lt));
+            map1.put(str1.charAt(lt), map1.getOrDefault(str1.charAt(lt), 0) - 1);
+            if(map1.get(str1.charAt(lt)) == 0) {
+                map1.remove(str1.charAt(lt));
             }
             lt++;
+
         }
 
 

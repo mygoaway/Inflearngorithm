@@ -26,8 +26,9 @@ public class section2 {
             if(!map.containsKey(ch) || map.get(ch) == 0) {
                 return "NO";
             }
-            map.put(ch, map.get(ch)-1);
+            map.put(ch, map.get(ch) - 1);
         }
+
 
         return answer;
     }

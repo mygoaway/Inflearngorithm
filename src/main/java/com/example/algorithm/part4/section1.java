@@ -26,9 +26,9 @@ public class section1 {
         }
 
         for(char ch : map.keySet()) {
-            Integer tmp = map.get(ch);
-            if(tmp > max) {
-                max = tmp;
+            Integer num = map.get(ch);
+            if(num > max) {
+                max = num;
                 answer = ch;
             }
         }
