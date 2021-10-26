@@ -13,7 +13,7 @@ public class section3 {
         if(n == 1) {
             return 1;
         } else {
-            return n*dfs(n-1);
+            return n * dfs(n-1);
         }
     }
 }

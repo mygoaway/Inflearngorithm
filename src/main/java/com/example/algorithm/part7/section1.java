@@ -13,7 +13,7 @@ public class section1 {
             return;
         } else {
             dfs(n-1);
-            System.out.println("n의 값은 = " + n);
+            System.out.println(n);
         }
     }
 }

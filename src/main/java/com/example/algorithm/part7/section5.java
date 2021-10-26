@@ -1,28 +1,25 @@
 package com.example.algorithm.part7;
 
 // 이진트리순회(DFS)
-class Node{
+class Node {
     int data;
     Node lt, rt;
-    public Node(int data) {
-        this.data = data;
+    public Node(int val) {
+        this.data = val;
         lt=rt=null;
     }
 }
 
 public class section5 {
     Node root;
-
     public void dfs(Node root) {
         if(root == null) {
             return;
         } else {
-            // 전위순환출력 : System.out.println(root.data);
+
             dfs(root.lt);
-            // 중위순환출력 : System.out.println(root.data);
-            dfs(root.rt);
-            // 후위순환출력
             System.out.println(root.data);
+            dfs(root.rt);
         }
     }
 
