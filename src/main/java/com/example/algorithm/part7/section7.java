@@ -22,20 +22,19 @@ public class section7 {
         while(!Q.isEmpty()) {
             int len = Q.size();
             System.out.print(L + " : ");
-            for(int i = 0; i < len; i++) {
+            for (int i = 0; i < len; i++) {
                 Nodes curr = Q.poll();
                 System.out.print(curr.data);
-                if(curr.lt != null) {
+                if (curr.lt != null) {
                     Q.offer(curr.lt);
                 }
-                if(curr.rt != null) {
+                if (curr.rt != null) {
                     Q.offer(curr.rt);
                 }
             }
             L++;
             System.out.println();
         }
-
     }
 
     public static void main(String[] args) {
