@@ -16,20 +16,20 @@ class Nodes {
 public class section7 {
     Nodes root;
     public void bfs(Nodes root) {
-        Queue<Nodes> Q = new LinkedList<>();
-        Q.offer(root);
+        Queue<Nodes> q = new LinkedList<>();
+        q.offer(root);
         int L = 0;
-        while(!Q.isEmpty()) {
-            int len = Q.size();
+        while(!q.isEmpty()) {
             System.out.print(L + " : ");
-            for (int i = 0; i < len; i++) {
-                Nodes curr = Q.poll();
-                System.out.print(curr.data);
-                if (curr.lt != null) {
-                    Q.offer(curr.lt);
+            int size = q.size();
+            for(int i = 0; i < size; i++) {
+                Nodes nodes = q.poll();
+                System.out.print(nodes.data);
+                if(nodes.lt != null) {
+                    q.offer(nodes.lt);
                 }
-                if (curr.rt != null) {
-                    Q.offer(curr.rt);
+                if(nodes.rt != null) {
+                    q.offer(nodes.rt);
                 }
             }
             L++;

@@ -16,7 +16,6 @@ public class section5 {
         if(root == null) {
             return;
         } else {
-
             dfs(root.lt);
             System.out.println(root.data);
             dfs(root.rt);
