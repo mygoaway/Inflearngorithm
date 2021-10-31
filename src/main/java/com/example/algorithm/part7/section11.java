@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-// 인접 행렬
+// 경로탐색(인접 행렬)
 public class section11 {
     static int n, m, answer = 0;
     static int [][] graph;
