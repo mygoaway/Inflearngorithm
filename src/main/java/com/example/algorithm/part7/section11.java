@@ -11,7 +11,7 @@ public class section11 {
     static int [] ch;
 
     public void DFS(int v) {
-        if(v == m) {
+        if(v == n) {
             answer++;
         } else {
             for(int i = 1; i <=n; i++) {
