@@ -7,7 +7,7 @@ public class section10 {
         int [] intArr = new int[str.length()];
         int len = 1000;
 
-        for(int i = 0; i < str.length(); i++) {
+        for(int i = 0; i < str.length() - 1; i++) {
             if(str.charAt(i) == ch) {
                 len = 0;
                 intArr[i] = len;
@@ -25,10 +25,9 @@ public class section10 {
             } else {
                 len++;
                 intArr[i] = Math.min(intArr[i], len);
+
             }
         }
-
-
 
         return intArr;
     }

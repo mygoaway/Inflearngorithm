@@ -7,18 +7,18 @@ public class section4 {
     public ArrayList<String> solution(String[] strArr) {
         ArrayList<String> list = new ArrayList<>();
 
-        for(String x : strArr) {
-            char [] ch = x.toCharArray();
+        for(String str : strArr) {
+            char [] charArr = str.toCharArray();
             int lt = 0;
-            int rt = ch.length - 1;
+            int rt = charArr.length - 1;
             while(lt < rt) {
-                char tmp = ch[lt];
-                ch[lt] = ch[rt];
-                ch[rt] = tmp;
+                char ch = charArr[lt];
+                charArr[lt] = charArr[rt];
+                charArr[rt] = ch;
                 lt++;
                 rt--;
             }
-            list.add(String.valueOf(ch));
+            list.add(String.valueOf(charArr));
         }
 
         return list;

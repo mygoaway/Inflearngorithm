@@ -10,7 +10,7 @@ public class section11 {
         str = str + " ";
 
         for(int i = 0; i < str.length() - 1; i++) {
-            if(str.charAt(i) == str.charAt(i+1)){
+            if(str.charAt(i) == str.charAt(i+1)) {
                 num++;
             } else {
                 answer += str.charAt(i);
@@ -20,6 +20,7 @@ public class section11 {
                 num = 1;
             }
         }
+
 
         return answer;
     }

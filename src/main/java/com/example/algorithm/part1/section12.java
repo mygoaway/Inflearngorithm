@@ -7,12 +7,13 @@ public class section12 {
         String answer = "";
 
         for(int i = 0; i < cnt; i++) {
-            String tmp = str.substring(0, 7).replace('#', '1').replace('*', '0');
+            String tmp = str.substring(0, 7).replace('#', '1').replace('*','0');
             int num = Integer.parseInt(tmp, 2);
-            char ch = (char) num;
+            char ch = (char)num;
             answer += ch;
             str = str.substring(7);
         }
+
         return answer;
     }
 
