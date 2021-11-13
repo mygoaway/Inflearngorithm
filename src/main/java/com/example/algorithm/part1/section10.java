@@ -19,15 +19,16 @@ public class section10 {
 
         len = 1000;
 
-        for(int i = str.length() - 1; i >= 0; i--) {
+        for(int i = str.length() - 1; i >=0; i--) {
             if(str.charAt(i) == ch) {
                 len = 0;
             } else {
                 len++;
-                intArr[i] = Math.min(intArr[i], len);
-
+                intArr[i] = Integer.min(intArr[i], len);
             }
         }
+
+
 
         return intArr;
     }

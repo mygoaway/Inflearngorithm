@@ -21,7 +21,6 @@ public class section11 {
             }
         }
 
-
         return answer;
     }
 

@@ -11,7 +11,6 @@ public class section9 {
                 answer += ch;
             }
         }
-
         int result = Integer.parseInt(answer);
         return result;
     }
