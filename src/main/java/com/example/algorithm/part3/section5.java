@@ -17,6 +17,7 @@ public class section5 {
 
         int num = cnt / 2 + 1;
         int [] intArr = new int[num];
+
         for(int i = 0; i < intArr.length; i++) {
             intArr[i] = i+1;
         }
@@ -36,6 +37,7 @@ public class section5 {
                 }
             }
         }
+
 
         return answer;
     }

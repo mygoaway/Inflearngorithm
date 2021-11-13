@@ -34,24 +34,20 @@ public class section1 {
         int p1 = 0;
         int p2 = 0;
 
-        while(p1 < a && p2 < b) {
+        while(a > p1 && b > p2) {
             if(intArrA[p1] < intArrB[p2]) {
-                answer.add(intArrA[p1]);
-                p1++;
+                answer.add(intArrA[p1++]);
             } else {
-                answer.add(intArrB[p2]);
-                p2++;
+                answer.add(intArrB[p2++]);
             }
         }
 
-        while(p1 < a) {
-            answer.add(intArrA[p1]);
-            p1++;
+        while(a > p1) {
+            answer.add(intArrA[p1++]);
         }
 
-        while(p2 < b) {
-            answer.add(intArrB[p2]);
-            p2++;
+        while(b > p2) {
+            answer.add(intArrB[p2++]);
         }
 
         return answer;
