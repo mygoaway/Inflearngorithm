@@ -29,7 +29,6 @@ public class section2 {
             map.put(ch, map.get(ch) - 1);
         }
 
-
         return answer;
     }
 }

@@ -23,21 +23,20 @@ public class section3 {
         List<Integer> answer = new ArrayList<>();
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for(int i = 0; i < b-1; i++) {
+        for(int i = 0; i < b - 1; i++) {
             map.put(intArrA[i], map.getOrDefault(intArrA[i], 0) + 1);
         }
 
         int lt = 0;
-        for(int rt = b-1; rt < a; rt++) {
-            map.put(intArrA[rt], map.getOrDefault(intArrA[rt], 0 ) + 1);
+        for(int rt =b - 1; rt < a; rt++) {
+            map.put(intArrA[rt], map.getOrDefault(intArrA[rt], 0) + 1);
             answer.add(map.size());
-            map.put(intArrA[lt], map.get(intArrA[lt])-1);
+            map.put(intArrA[lt], map.get(intArrA[lt]) - 1);
             if(map.get(intArrA[lt]) == 0) {
                 map.remove(intArrA[lt]);
             }
             lt++;
         }
-
 
 
 
