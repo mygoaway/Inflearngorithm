@@ -20,8 +20,8 @@ public class section9 {
 
     public int solution(int cnt, int [][] intArr) {
         int answer = Integer.MIN_VALUE;
-        int answer1 = 0;
-        int answer2 = 0;
+        int answer1;
+        int answer2;
 
         for(int i = 0; i < cnt; i++) {
             answer1 = 0;
@@ -39,12 +39,10 @@ public class section9 {
 
         for(int i = 0; i < cnt; i++) {
             answer1 += intArr[i][i];
-            answer2 += intArr[i][cnt-1-i];
+            answer2 += intArr[i][5-1-i];
         }
-
         answer = Math.max(answer, answer1);
         answer = Math.max(answer, answer2);
-
         return answer;
     }
 }

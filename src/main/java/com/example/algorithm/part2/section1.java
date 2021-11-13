@@ -21,7 +21,6 @@ public class section1 {
 
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
-
         answer.add(intArr[0]);
 
         for(int i = 1; i < cnt; i++) {
@@ -29,7 +28,6 @@ public class section1 {
                 answer.add(intArr[i]);
             }
         }
-
         return answer;
     }
 }

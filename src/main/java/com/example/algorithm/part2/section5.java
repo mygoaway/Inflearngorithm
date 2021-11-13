@@ -19,12 +19,11 @@ public class section5 {
         for(int i = 2; i < intArr.length; i++) {
             if(intArr[i] == 0) {
                 answer++;
-                for(int j = i; j < intArr.length; j=j+i) {
+                for(int j = i; j < intArr.length; j+=i){
                     intArr[j] = 1;
                 }
             }
         }
-
 
         return answer;
     }

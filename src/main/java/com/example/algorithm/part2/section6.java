@@ -24,9 +24,9 @@ public class section6 {
 
         for(int x : intArr) {
             int res = 0;
-            while( x>0 ) {
+            while(x > 0) {
                 int num = x % 10;
-                res = res * 10 + num;
+                res  = res * 10 + num;
                 x = x / 10;
             }
 
@@ -39,7 +39,7 @@ public class section6 {
     }
 
     private boolean isPermit(int res) {
-        if(res == 1){
+        if(res == 1) {
             return false;
         }
         for(int i = 2; i < res; i++) {
@@ -49,6 +49,4 @@ public class section6 {
         }
         return true;
     }
-
-
 }

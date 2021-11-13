@@ -20,7 +20,7 @@ public class section7 {
         int sum = 0, num = 0;
 
         for(int x : intArr) {
-            if( x == 1) {
+            if(x == 1){
                 num++;
                 sum += num;
             } else {

@@ -19,7 +19,7 @@ public class section2 {
 
     public int solution(int [] intArr) {
         int answer = 1;
-        int max = Integer.MIN_VALUE;
+        int max = intArr[0];
 
         for(int i = 1; i < intArr.length; i++) {
             if(intArr[i] > max) {
@@ -27,8 +27,6 @@ public class section2 {
                 answer++;
             }
         }
-
-
         return answer;
     }
 }
