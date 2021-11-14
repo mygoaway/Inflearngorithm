@@ -54,7 +54,7 @@ public class section8 {
                 }
             }
         }
-        
+
         return answer;
     }
 }

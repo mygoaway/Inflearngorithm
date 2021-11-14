@@ -18,7 +18,7 @@ public class section2 {
 
     public int [] solution(int cnt, int [] intArr) {
         for(int i = 0; i < cnt - 1; i++) {
-            for(int j = 0; j < cnt - 1 - i; j++ ){
+            for(int j = 0; j < cnt - 1 - i; j++) {
                 if(intArr[j] > intArr[j+1]) {
                     int tmp = intArr[j];
                     intArr[j] = intArr[j+1];
