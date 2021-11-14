@@ -33,11 +33,11 @@ public class section8 {
         int answer = 0;
         Queue<Person> q = new LinkedList<>();
 
-        for(int i = 0 ; i < cnt; i++) {
+        for(int i = 0; i < cnt; i++) {
             q.offer(new Person(i, intArr[i]));
         }
 
-        while (!q.isEmpty()) {
+        while(!q.isEmpty()) {
             Person p = q.poll();
             for(Person x : q) {
                 if(x.priority > p.priority) {
@@ -47,16 +47,14 @@ public class section8 {
                 }
             }
 
-            if(p != null) {
+            if( p != null) {
                 answer++;
                 if(p.num == people) {
                     return answer;
                 }
             }
         }
-
-
-
+        
         return answer;
     }
 }

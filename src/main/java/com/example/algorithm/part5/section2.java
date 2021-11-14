@@ -17,15 +17,14 @@ public class section2 {
         Stack <Character> stack = new Stack<>();
 
         for(char ch : str.toCharArray()) {
-            if(ch == '(' || Character.isAlphabetic(ch)) {
+            if(Character.isAlphabetic(ch) || ch == '(') {
                 stack.push(ch);
             } else {
                 while(stack.pop() != '(');
             }
         }
-
-        for(int i = 0; i < stack.size(); i++) {
-            answer += stack.get(i);
+        for(char ch : stack) {
+            answer += ch;
         }
 
         return answer;

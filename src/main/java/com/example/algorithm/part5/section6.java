@@ -34,7 +34,6 @@ public class section6 {
             }
         }
 
-
         return answer;
     }
 }

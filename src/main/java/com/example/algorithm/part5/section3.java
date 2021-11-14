@@ -46,7 +46,6 @@ public class section3 {
             }
         }
 
-
         return answer;
     }
 }
