@@ -23,11 +23,13 @@ public class section1 {
         List<Integer> answer = new ArrayList<>();
         answer.add(intArr[0]);
 
-        for(int i = 1; i < cnt; i++) {
+        for(int i = 1; i < intArr.length; i++) {
             if(intArr[i] > intArr[i-1]) {
                 answer.add(intArr[i]);
             }
         }
+
+
         return answer;
     }
 }

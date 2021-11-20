@@ -26,7 +26,7 @@ public class section6 {
             int res = 0;
             while(x > 0) {
                 int num = x % 10;
-                res  = res * 10 + num;
+                res = res * 10 + num;
                 x = x / 10;
             }
 
@@ -35,6 +35,7 @@ public class section6 {
             }
         }
 
+
         return answer;
     }
 
@@ -42,11 +43,16 @@ public class section6 {
         if(res == 1) {
             return false;
         }
-        for(int i = 2; i < res; i++) {
+
+        for(int i = 2; i < res ;i++) {
             if(res % i == 0) {
                 return false;
             }
         }
+
         return true;
+
     }
+
+
 }
