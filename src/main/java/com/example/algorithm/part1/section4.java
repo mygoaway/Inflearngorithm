@@ -12,14 +12,15 @@ public class section4 {
             int lt = 0;
             int rt = charArr.length - 1;
             while(lt < rt) {
-                char ch = charArr[lt];
+                char tmp = charArr[lt];
                 charArr[lt] = charArr[rt];
-                charArr[rt] = ch;
+                charArr[rt] = tmp;
                 lt++;
                 rt--;
             }
             list.add(String.valueOf(charArr));
         }
+
         return list;
     }
 

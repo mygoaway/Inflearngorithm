@@ -13,6 +13,7 @@ public class section7 {
             return "YES";
         }
 
+
         return answer;
     }
 

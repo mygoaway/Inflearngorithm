@@ -7,8 +7,9 @@ public class section10 {
         int [] intArr = new int[str.length()];
         int len = 1000;
 
-        for(int i = 0; i < str.length() - 1; i++) {
-            if(str.charAt(i) == ch) {
+        char [] charArr = str.toCharArray();
+        for(int i = 0; i < charArr.length; i++) {
+            if(charArr[i] == ch) {
                 len = 0;
                 intArr[i] = len;
             } else {
@@ -19,15 +20,14 @@ public class section10 {
 
         len = 1000;
 
-        for(int i = str.length() - 1; i >=0; i--) {
-            if(str.charAt(i) == ch) {
+        for(int i = charArr.length - 1; i >= 0; i--) {
+            if(charArr[i] == ch) {
                 len = 0;
             } else {
                 len++;
-                intArr[i] = Integer.min(intArr[i], len);
+                intArr[i] = Math.min(intArr[i], len);
             }
         }
-
 
 
         return intArr;

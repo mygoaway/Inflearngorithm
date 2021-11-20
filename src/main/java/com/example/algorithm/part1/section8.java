@@ -6,11 +6,11 @@ public class section8 {
     public String solution(String str) {
         String answer ="NO";
 
-        str = str.toLowerCase().replaceAll("[^a-z]", "");
+        str = str.toLowerCase().replaceAll("[^a-z]","");
         String tmp = new StringBuilder(str).reverse().toString();
 
         if(str.equals(tmp)) {
-            return "YES";
+            answer = "YES";
         }
 
         return answer;

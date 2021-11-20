@@ -8,14 +8,13 @@ public class section3 {
         int max = Integer.MIN_VALUE;
 
         String [] strArr = str.split(" ");
-        for(String st : strArr) {
-            int size = st.length();
-            if(size > max) {
-                max = size;
-                answer = st;
+        for(String s : strArr) {
+            int len = s.length();
+            if(len > max ) {
+                max = len;
+                answer = s;
             }
         }
-
 
         return answer;
     }

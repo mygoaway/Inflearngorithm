@@ -13,6 +13,7 @@ public class section1 {
                 answer++;
             }
         }
+
         return answer;
     }
 
