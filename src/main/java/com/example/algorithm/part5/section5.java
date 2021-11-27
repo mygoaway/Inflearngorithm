@@ -14,15 +14,15 @@ public class section5 {
 
     public int solution(String str) {
         int answer = 0;
-        Stack<Character> st = new Stack();
+        Stack<Character> stack = new Stack();
 
         for(int i = 0; i < str.length(); i++) {
             if(str.charAt(i) == '(') {
-                st.push(str.charAt(i));
+                stack.push(str.charAt(i));
             } else {
-                st.pop();
+                stack.pop();
                 if(str.charAt(i-1) == '(') {
-                    answer += st.size();
+                    answer += stack.size();
                 } else {
                     answer += 1;
                 }

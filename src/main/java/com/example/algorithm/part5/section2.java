@@ -23,10 +23,10 @@ public class section2 {
                 while(stack.pop() != '(');
             }
         }
+
         for(char ch : stack) {
             answer += ch;
         }
-
         return answer;
     }
 }

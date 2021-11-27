@@ -39,15 +39,15 @@ public class section8 {
 
         while(!q.isEmpty()) {
             Person p = q.poll();
-            for(Person x : q) {
-                if(x.priority > p.priority) {
+            for(Person px : q){
+                if(px.priority > p.priority) {
                     q.offer(p);
                     p = null;
                     break;
                 }
             }
 
-            if( p != null) {
+            if(p != null) {
                 answer++;
                 if(p.num == people) {
                     return answer;

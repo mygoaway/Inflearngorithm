@@ -23,9 +23,9 @@ public class section7 {
             q.offer(ch);
         }
 
-        for(char ch : str.toCharArray()){
+        for(char ch : str.toCharArray()) {
             if(q.contains(ch)) {
-                if(ch != q.poll()) {
+                if(q.poll() != ch) {
                     return "NO";
                 }
             }

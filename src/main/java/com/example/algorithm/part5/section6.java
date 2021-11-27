@@ -29,6 +29,7 @@ public class section6 {
                 q.offer(q.poll());
             }
             q.poll();
+
             if(q.size() == 1) {
                 answer = q.poll();
             }

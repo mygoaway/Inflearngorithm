@@ -24,15 +24,16 @@ public class section4 {
                 int lt = st.pop();
                 if(ch == '+') {
                     st.push(lt+rt);
-                } else if ( ch=='-') {
+                } else if (ch == '-' ) {
                     st.push(lt-rt);
-                } else if ( ch=='*') {
+                } else if (ch == '*') {
                     st.push(lt*rt);
                 } else {
                     st.push(lt/rt);
                 }
             }
         }
+
         answer = st.get(0);
         return answer;
     }
