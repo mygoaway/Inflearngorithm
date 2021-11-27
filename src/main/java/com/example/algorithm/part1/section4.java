@@ -20,7 +20,6 @@ public class section4 {
             }
             list.add(String.valueOf(charArr));
         }
-
         return list;
     }
 

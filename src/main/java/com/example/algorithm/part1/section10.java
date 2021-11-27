@@ -28,8 +28,6 @@ public class section10 {
                 intArr[i] = Math.min(intArr[i], len);
             }
         }
-
-
         return intArr;
     }
 

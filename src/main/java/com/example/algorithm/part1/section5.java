@@ -13,7 +13,7 @@ public class section5 {
         while(lt < rt) {
             if(!Character.isAlphabetic(charArr[lt])) {
                 lt++;
-            } else if(!Character.isAlphabetic(charArr[rt])) {
+            } else if (!Character.isAlphabetic(charArr[rt])) {
                 rt--;
             } else {
                 char tmp = charArr[lt];
@@ -23,7 +23,6 @@ public class section5 {
                 rt--;
             }
         }
-
         answer = String.valueOf(charArr);
         return answer;
     }

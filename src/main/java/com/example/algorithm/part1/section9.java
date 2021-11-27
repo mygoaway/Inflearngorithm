@@ -6,7 +6,7 @@ public class section9 {
     public int solution(String str) {
         String answer = "";
 
-        for(char ch : str.toCharArray()) {
+        for(char ch : str.toCharArray()){
             if(Character.isDigit(ch)) {
                 answer += ch;
             }

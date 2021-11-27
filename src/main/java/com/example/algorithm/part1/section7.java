@@ -12,8 +12,6 @@ public class section7 {
         if(str.equals(tmp)) {
             return "YES";
         }
-
-
         return answer;
     }
 

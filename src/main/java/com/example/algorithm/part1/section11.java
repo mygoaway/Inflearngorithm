@@ -5,21 +5,23 @@ import java.util.Scanner;
 public class section11 {
     public String solution(String str) {
         String answer = "";
-
-        int num = 1;
         str = str +" ";
+        int len = 1;
 
-        for(int i = 0; i < str.length() - 1; i++) {
-            if(str.charAt(i) == str.charAt(i+1)) {
-                num++;
+        char [] charArr = str.toCharArray();
+
+        for(int i = 0; i < charArr.length - 1; i++) {
+            if(charArr[i] == charArr[i+1]) {
+                len++;
             } else {
-                answer += str.charAt(i);
-                if(num > 1) {
-                    answer += num;
+                answer += charArr[i];
+                if(len > 1) {
+                    answer += len;
                 }
-                num = 1;
+                len = 1;
             }
         }
+
 
         return answer;
     }
