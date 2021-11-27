@@ -20,7 +20,7 @@ public class section5 {
 
     public int solution(int a, int b, int [] intArrA) {
         int answer = 0;
-        TreeSet <Integer> set = new TreeSet<>(Collections.reverseOrder());
+        TreeSet<Integer> set = new TreeSet<>(Collections.reverseOrder());
 
         for(int i = 0; i < a; i++) {
             for(int j = i+1; j < a; j++) {
@@ -30,8 +30,9 @@ public class section5 {
             }
         }
 
-        List<Integer> list = new ArrayList<>(set);
-        answer = list.get(b-1);
+        List <Integer> list = new ArrayList<>(set);
+        answer = list.get(b - 1);
+
         return answer;
     }
 }

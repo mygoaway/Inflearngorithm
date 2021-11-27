@@ -32,7 +32,6 @@ public class section1 {
                 answer = ch;
             }
         }
-
         return answer;
     }
 }
