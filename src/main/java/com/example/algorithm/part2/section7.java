@@ -17,15 +17,15 @@ public class section7 {
     }
 
     public int solution(int cnt, int [] intArr) {
-        int sum = 0, num = 0;
-
+        int sum = 0;
+        int num = 0;
 
         for(int x : intArr) {
             if(x == 1) {
                 num++;
                 sum += num;
             } else {
-                num =0;
+                num = 0;
             }
         }
 

@@ -16,7 +16,7 @@ public class section5 {
         int answer = 0;
         int [] intArr = new int[cnt+1];
 
-        for(int i = 2; i< intArr.length; i++) {
+        for(int i = 2; i < intArr.length; i++) {
             if(intArr[i] == 0) {
                 answer++;
                 for(int j = i; j < intArr.length; j+=i) {
@@ -24,7 +24,6 @@ public class section5 {
                 }
             }
         }
-
         return answer;
     }
 }

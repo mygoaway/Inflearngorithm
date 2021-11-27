@@ -23,18 +23,16 @@ public class section9 {
         int answer1 = 0;
         int answer2 = 0;
 
-
-        for(int i = 0; i< cnt; i++) {
+        for(int i = 0; i < cnt; i++) {
             answer1 = 0;
             answer2 = 0;
-
-            for(int j = 0; j < cnt;  j++)  {
+            for(int j = 0; j < cnt; j++) {
                 answer1 += intArr[i][j];
                 answer2 += intArr[j][i];
             }
 
-            answer = Math.max(answer, answer1);
-            answer = Math.max(answer, answer2);
+            answer = Integer.max(answer, answer1);
+            answer = Integer.max(answer, answer2);
         }
 
         answer1 = 0;
@@ -42,11 +40,10 @@ public class section9 {
 
         for(int i = 0; i < cnt; i++) {
             answer1 += intArr[i][i];
-            answer2 += intArr[i][cnt-1-i];
+            answer2 += intArr[i][5-i-1];
         }
-
-        answer = Math.max(answer, answer1);
-        answer = Math.max(answer, answer2);
+        answer = Integer.max(answer, answer1);
+        answer = Integer.max(answer, answer2);
 
         return answer;
     }

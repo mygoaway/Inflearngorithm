@@ -28,8 +28,6 @@ public class section1 {
                 answer.add(intArr[i]);
             }
         }
-
-
         return answer;
     }
 }
