@@ -30,26 +30,21 @@ public class section1 {
 
     public List<Integer> solution(int a, int b, int [] intArrA, int [] intArrB) {
         List<Integer> answer = new ArrayList<>();
-
         int p1 = 0;
         int p2 = 0;
-
-        while(a > p1 && b > p2) {
+        while( a > p1 && b > p2 ) {
             if(intArrA[p1] < intArrB[p2]) {
                 answer.add(intArrA[p1++]);
             } else {
                 answer.add(intArrB[p2++]);
             }
         }
-
-        while(a > p1) {
+        while( a > p1) {
             answer.add(intArrA[p1++]);
         }
-
-        while(b > p2) {
+        while( b > p2) {
             answer.add(intArrB[p2++]);
         }
-
         return answer;
     }
 }

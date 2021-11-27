@@ -22,8 +22,8 @@ public class section3 {
 
     public int solution(int a, int b, int [] intArrA) {
         int answer = 0;
-        int sum = 0;
         int max = Integer.MIN_VALUE;
+        int sum = 0;
 
         for(int i = 0; i < b - 1; i++) {
             sum += intArrA[i];
@@ -32,13 +32,14 @@ public class section3 {
         int lt = 0;
         for(int rt = b - 1; rt < a; rt++) {
             sum += intArrA[rt];
-
             if(sum > max) {
                 max = sum;
-                answer = sum;
+                answer = max;
             }
-            sum -= intArrA[lt++];
+            sum -= intArrA[lt];
+            lt++;
         }
+
 
         return answer;
     }

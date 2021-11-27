@@ -42,13 +42,12 @@ public class section2 {
                 answer.add(intArrA[p1]);
                 p1++;
                 p2++;
-            } else if ( intArrA[p1] < intArrB[p2]) {
+            } else if (intArrA[p1] < intArrB[p2]) {
                 p1++;
             } else {
                 p2++;
             }
         }
-
         return answer;
     }
 }

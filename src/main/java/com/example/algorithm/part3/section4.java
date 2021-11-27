@@ -13,9 +13,7 @@ public class section4 {
         for(int i = 0; i < intArrA.length; i++) {
             intArrA[i] = scan.nextInt();
         }
-
         System.out.print(se1.solution(cntA, cntB, intArrA));
-
     }
 
     public int solution(int a, int b, int [] intArrA) {
@@ -23,14 +21,15 @@ public class section4 {
         int sum = 0;
 
         int lt = 0;
-        for(int rt = 0; rt < a; rt++) {
+        for(int rt = 0; rt < intArrA.length; rt++) {
             sum += intArrA[rt];
             if(sum == b) {
                 answer++;
             }
+
             while(sum > b) {
                 sum -= intArrA[lt++];
-                if(sum == b) {
+                if(sum == b){
                     answer++;
                 }
             }

@@ -25,11 +25,9 @@ public class section5 {
         int lt = 0;
         for(int rt = 0; rt < intArr.length; rt++) {
             sum += intArr[rt];
-
             if(sum == cnt) {
                 answer++;
             }
-
             while(sum > cnt) {
                 sum -= intArr[lt++];
                 if(sum == cnt) {
@@ -37,8 +35,6 @@ public class section5 {
                 }
             }
         }
-
-
         return answer;
     }
 }
