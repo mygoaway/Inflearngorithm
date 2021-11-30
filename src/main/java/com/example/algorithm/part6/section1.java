@@ -26,12 +26,11 @@ public class section1 {
                 if(intArr[idx] > intArr[j]) {
                     idx = j;
                 }
-                int tmp = intArr[i];
-                intArr[i] = intArr[idx];
-                intArr[idx] = tmp;
+                int tmp = intArr[idx];
+                intArr[idx] = intArr[i];
+                intArr[i] = tmp;
             }
         }
-
         return intArr;
     }
 }

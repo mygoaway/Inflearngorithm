@@ -21,16 +21,14 @@ public class section6 {
 
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
-
         int [] tmp = intArr.clone();
         Arrays.sort(tmp);
 
-        for(int i = 0 ; i < cnt; i++) {
+        for(int i = 0; i < cnt; i++) {
             if(intArr[i] != tmp[i]) {
                 answer.add(i+1);
             }
         }
-
         return answer;
     }
 }

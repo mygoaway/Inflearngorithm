@@ -18,16 +18,16 @@ public class section3 {
 
     public int [] solution(int cnt, int [] intArr) {
         for(int i = 1; i < cnt; i++) {
-            int tmp = intArr[i];
+            int num = intArr[i];
             int j = 0;
             for(j = i-1; j>=0; j--) {
-                if(intArr[j] > tmp) {
+                if(intArr[j] > num) {
                     intArr[j+1] = intArr[j];
                 } else {
                     break;
                 }
             }
-            intArr[j+1] = tmp;
+            intArr[j+1] = num;
         }
 
         return intArr;
