@@ -25,7 +25,7 @@ public class section9 {
 
         while(lt <= rt) {
             int mid = (lt+rt) / 2;
-            if(check(intArr, mid) <= 3) {
+            if(check(intArr, mid) <= num) {
                 answer = mid;
                 rt = mid - 1;
             } else {

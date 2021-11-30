@@ -19,6 +19,7 @@ public class section7 {
     }
 }
 
+
 class Point implements Comparable<Point> {
     public int x;
     public int y;
@@ -27,6 +28,7 @@ class Point implements Comparable<Point> {
         this.x = x;
         this.y = y;
     }
+
 
     @Override
     public int compareTo(Point o) {
