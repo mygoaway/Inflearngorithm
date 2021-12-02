@@ -31,7 +31,7 @@ public class section8 {
                 answer = mid+1;
             }
             if(intArr[mid] > num) {
-                rt = mid - 1;
+                rt = mid-1;
             } else {
                 lt = mid+1;
             }

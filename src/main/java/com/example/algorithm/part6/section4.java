@@ -23,17 +23,17 @@ public class section4 {
         for(int x : intArr) {
             int pos = -1;
             for(int i = 0; i < size; i++) {
-                if(x == intArr[i]) {
+                if(cache[i] == x) {
                     pos = i;
                 }
             }
 
             if(pos == -1) {
-                for(int i = size-1; i>=1; i--) {
+                for(int i = size - 1; i >= 1; i--) {
                     cache[i] = cache[i-1];
                 }
             } else {
-                for(int i = pos; i>=1; i--) {
+                for(int i = pos; i >= 1; i--) {
                     cache[i] = cache[i-1];
                 }
             }

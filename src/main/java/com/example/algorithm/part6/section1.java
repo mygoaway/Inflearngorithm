@@ -26,9 +26,9 @@ public class section1 {
                 if(intArr[idx] > intArr[j]) {
                     idx = j;
                 }
-                int tmp = intArr[idx];
-                intArr[idx] = intArr[i];
-                intArr[i] = tmp;
+                int tmp = intArr[i];
+                intArr[i] = intArr[idx];
+                intArr[idx] = tmp;
             }
         }
         return intArr;

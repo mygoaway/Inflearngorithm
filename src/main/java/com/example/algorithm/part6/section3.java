@@ -20,7 +20,7 @@ public class section3 {
         for(int i = 1; i < cnt; i++) {
             int num = intArr[i];
             int j = 0;
-            for(j = i-1; j>=0; j--) {
+            for(j = i-1; j >= 0; j--) {
                 if(intArr[j] > num) {
                     intArr[j+1] = intArr[j];
                 } else {
@@ -29,7 +29,6 @@ public class section3 {
             }
             intArr[j+1] = num;
         }
-
         return intArr;
     }
 }

@@ -7,7 +7,6 @@ public class section2 {
     public static void main(String[] args) {
         section2 se1 = new section2();
         Scanner scan = new Scanner(System.in);
-
         int cnt = scan.nextInt();
         int [] intArr= new int[cnt];
         for(int i = 0; i < cnt; i++) intArr[i] = scan.nextInt();

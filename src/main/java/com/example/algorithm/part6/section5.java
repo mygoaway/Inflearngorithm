@@ -22,7 +22,7 @@ public class section5 {
         String answer = "U";
         Arrays.sort(intArr);
 
-        for(int i = 0; i < cnt - 1; i++) {
+        for(int i = 0; i < intArr.length -1; i++){
             if(intArr[i] == intArr[i+1]) {
                 return "D";
             }

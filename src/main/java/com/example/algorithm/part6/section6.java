@@ -21,6 +21,7 @@ public class section6 {
 
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
+
         int [] tmp = intArr.clone();
         Arrays.sort(tmp);
 
@@ -29,6 +30,7 @@ public class section6 {
                 answer.add(i+1);
             }
         }
+
         return answer;
     }
 }

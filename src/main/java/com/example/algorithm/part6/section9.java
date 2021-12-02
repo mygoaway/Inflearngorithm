@@ -20,36 +20,7 @@ public class section9 {
     public int solution(int cnt, int num, int [] intArr) {
         int answer = 0;
 
-        int lt = Arrays.stream(intArr).max().getAsInt();
-        int rt = Arrays.stream(intArr).sum();
 
-        while(lt <= rt) {
-            int mid = (lt+rt) / 2;
-            if(check(intArr, mid) <= num) {
-                answer = mid;
-                rt = mid - 1;
-            } else {
-                lt = mid + 1;
-            }
-        }
         return answer;
     }
-
-    private int check(int[] intArr, int mid) {
-        int cnt = 1;
-        int sum = 0;
-
-        for(int x : intArr) {
-            if(sum+x > mid) {
-                cnt++;
-                sum = x;
-            } else {
-                sum += x;
-            }
-        }
-
-        return cnt;
-    }
-
-
 }
