@@ -21,20 +21,21 @@ public class section4 {
         int sum = 0;
 
         int lt = 0;
-        for(int rt = 0; rt < intArrA.length; rt++) {
-            sum += intArrA[rt];
+        for(int i = 0; i < intArrA.length; i++) {
+            sum += intArrA[i];
 
             if(sum == b) {
                 answer++;
             }
 
-            while(sum > b) {
+            while(sum > b){
                 sum -= intArrA[lt++];
-                if(sum == b){
+                if(sum == b) {
                     answer++;
                 }
             }
         }
+
 
         return answer;
     }

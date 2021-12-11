@@ -53,7 +53,6 @@ public class section1 {
         while(p2 < b) {
             answer.add(intArrB[p2++]);
         }
-
         return answer;
     }
 }

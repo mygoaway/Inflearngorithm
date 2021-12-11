@@ -27,11 +27,11 @@ public class section5 {
             sum += intArr[rt];
 
             if(sum == cnt) {
-                answer++;
+                answer ++;
             }
 
             while(sum > cnt) {
-                sum -= intArr[rt++];
+                sum -= intArr[lt++];
                 if(sum == cnt) {
                     answer++;
                 }

@@ -40,6 +40,7 @@ public class section2 {
         while(p1 < a && p2 < b) {
             if(intArrA[p1] == intArrB[p2]) {
                 answer.add(intArrA[p1]);
+                p1++;
                 p2++;
             } else if (intArrA[p1] < intArrB[p2]) {
                 p1++;
@@ -47,7 +48,6 @@ public class section2 {
                 p2++;
             }
         }
-
 
         return answer;
     }
