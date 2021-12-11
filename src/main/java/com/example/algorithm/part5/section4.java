@@ -33,8 +33,8 @@ public class section4 {
                 }
             }
         }
-
         answer = st.get(0);
+
         return answer;
     }
 }

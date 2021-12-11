@@ -27,7 +27,7 @@ public class section1 {
             }
         }
 
-        if(!stack.isEmpty()){
+        if(!stack.isEmpty()) {
             return "NO";
         }
 

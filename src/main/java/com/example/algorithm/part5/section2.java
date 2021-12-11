@@ -17,7 +17,7 @@ public class section2 {
         Stack <Character> stack = new Stack<>();
 
         for(char ch : str.toCharArray()) {
-            if(Character.isAlphabetic(ch) || ch == '(') {
+            if(ch == '(' || Character.isAlphabetic(ch)) {
                 stack.push(ch);
             } else {
                 while(stack.pop() != '(');
