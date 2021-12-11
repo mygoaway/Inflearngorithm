@@ -3,6 +3,7 @@ package com.example.algorithm.part3;
 import sun.security.pkcs11.P11TlsKeyMaterialGenerator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -30,21 +31,29 @@ public class section1 {
 
     public List<Integer> solution(int a, int b, int [] intArrA, int [] intArrB) {
         List<Integer> answer = new ArrayList<>();
+
+        Arrays.sort(intArrA);
+        Arrays.sort(intArrB);
+
         int p1 = 0;
         int p2 = 0;
-        while( a > p1 && b > p2 ) {
+
+        while(p1 < a && p2 < b) {
             if(intArrA[p1] < intArrB[p2]) {
                 answer.add(intArrA[p1++]);
             } else {
                 answer.add(intArrB[p2++]);
             }
         }
-        while( a > p1) {
+
+        while(p1 < a) {
             answer.add(intArrA[p1++]);
         }
-        while( b > p2) {
+
+        while(p2 < b) {
             answer.add(intArrB[p2++]);
         }
+
         return answer;
     }
 }

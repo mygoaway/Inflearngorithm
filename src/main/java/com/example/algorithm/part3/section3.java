@@ -30,15 +30,15 @@ public class section3 {
         }
 
         int lt = 0;
-        for(int rt = b - 1; rt < a; rt++) {
+        for(int rt = b-1; rt < intArrA.length; rt++) {
             sum += intArrA[rt];
             if(sum > max) {
                 max = sum;
                 answer = max;
             }
-            sum -= intArrA[lt];
-            lt++;
+            sum -= intArrA[lt++];
         }
+
 
 
         return answer;

@@ -23,6 +23,7 @@ public class section4 {
         int lt = 0;
         for(int rt = 0; rt < intArrA.length; rt++) {
             sum += intArrA[rt];
+
             if(sum == b) {
                 answer++;
             }
