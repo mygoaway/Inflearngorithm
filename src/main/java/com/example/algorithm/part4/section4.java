@@ -36,12 +36,13 @@ public class section4 {
                 answer++;
             }
 
-            map1.put(str1.charAt(lt), map1.get(str1.charAt(lt)) - 1);
+            map1.put(str1.charAt(lt), map1.get(str1.charAt(lt)) -1);
             if(map1.get(str1.charAt(lt)) == 0) {
                 map1.remove(str1.charAt(lt));
             }
             lt++;
         }
+
 
         return answer;
     }

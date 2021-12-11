@@ -29,7 +29,6 @@ public class section5 {
                 }
             }
         }
-
         List <Integer> list = new ArrayList<>(set);
         answer = list.get(b - 1);
 
