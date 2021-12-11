@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class section5 {
     public String solution(String str) {
         String answer = "";
-
         char [] charArr = str.toCharArray();
         int lt = 0;
         int rt = charArr.length - 1;

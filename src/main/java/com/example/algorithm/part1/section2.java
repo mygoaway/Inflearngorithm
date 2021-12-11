@@ -12,6 +12,7 @@ public class section2 {
                 answer += Character.toLowerCase(ch);
             }
         }
+
         return answer;
     }
 

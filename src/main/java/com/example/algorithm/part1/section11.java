@@ -18,7 +18,7 @@ public class section11 {
                 if(len > 1) {
                     answer += len;
                 }
-                len = 1;
+                len=1;
             }
         }
 
