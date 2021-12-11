@@ -27,6 +27,8 @@ public class section2 {
                 answer++;
             }
         }
+
+
         return answer;
     }
 }

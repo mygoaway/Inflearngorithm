@@ -19,7 +19,6 @@ public class section7 {
     public int solution(int cnt, int [] intArr) {
         int sum = 0;
         int num = 0;
-
         for(int x : intArr) {
             if(x == 1) {
                 num++;
@@ -28,7 +27,6 @@ public class section7 {
                 num = 0;
             }
         }
-
         return sum;
     }
 }

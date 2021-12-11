@@ -23,25 +23,26 @@ public class section9 {
         int answer1 = 0;
         int answer2 = 0;
 
-        for(int i = 0; i < cnt; i++) {
+        for(int i = 0; i < intArr.length; i++) {
             answer1 = 0;
             answer2 = 0;
-            for(int j = 0; j < cnt; j++) {
+            for(int j = 0; j < intArr.length; j++) {
                 answer1 += intArr[i][j];
                 answer2 += intArr[j][i];
-            }
 
-            answer = Integer.max(answer, answer1);
-            answer = Integer.max(answer, answer2);
+                answer = Integer.max(answer, answer1);
+                answer = Integer.max(answer, answer2);
+            }
         }
 
         answer1 = 0;
         answer2 = 0;
 
-        for(int i = 0; i < cnt; i++) {
+        for(int i = 0; i < intArr.length; i++) {
             answer1 += intArr[i][i];
-            answer2 += intArr[i][5-i-1];
+            answer2 += intArr[i][cnt-1-i];
         }
+
         answer = Integer.max(answer, answer1);
         answer = Integer.max(answer, answer2);
 

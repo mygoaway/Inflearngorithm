@@ -44,11 +44,10 @@ public class section6 {
             return false;
         }
         for(int i = 2; i < res; i++) {
-            if(res % i == 0){
+            if(res % i == 0) {
                 return false;
             }
         }
-
         return true;
     }
 

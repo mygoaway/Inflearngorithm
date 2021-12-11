@@ -20,10 +20,11 @@ public class section8 {
 
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
+        int num = 1;
 
-        for(int i = 0; i < cnt; i++) {
-            int num = 1;
-            for(int j = 0; j < cnt; j++) {
+        for(int i = 0; i < intArr.length; i++) {
+            num = 1;
+            for(int j = 0; j < intArr.length; j++) {
                 if(intArr[i] < intArr[j]) {
                     num++;
                 }
