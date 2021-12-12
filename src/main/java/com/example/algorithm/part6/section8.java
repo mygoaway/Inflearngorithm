@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-
+// 이분검색
 public class section8 {
     public static void main(String[] args) {
         section8 se1 = new section8();
@@ -25,17 +25,21 @@ public class section8 {
 
         int lt = 0;
         int rt = cnt - 1;
+
         while(lt <= rt) {
-            int mid =(lt+rt) / 2;
-            if(intArr[mid] == num) {
+            int mid = (lt + rt) / 2;
+            if(intArr[mid]== num) {
                 answer = mid+1;
             }
+
             if(intArr[mid] > num) {
-                rt = mid-1;
+                rt = mid - 1;
             } else {
-                lt = mid+1;
+                lt = mid + 1;
             }
         }
+
+
 
         return answer;
     }
