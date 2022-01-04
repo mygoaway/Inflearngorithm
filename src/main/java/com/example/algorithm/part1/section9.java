@@ -13,6 +13,7 @@ public class section9 {
         }
 
 
+
         int result = Integer.parseInt(answer);
         return result;
     }
