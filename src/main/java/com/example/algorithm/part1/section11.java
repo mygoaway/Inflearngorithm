@@ -5,20 +5,19 @@ import java.util.Scanner;
 public class section11 {
     public String solution(String str) {
         String answer = "";
-        str = str +" ";
-        int len = 1;
+        int num = 1;
 
-        char [] charArr = str.toCharArray();
+        str = str + " ";
 
-        for(int i = 0; i < charArr.length - 1; i++) {
-            if(charArr[i] == charArr[i+1]) {
-                len++;
+        for(int i = 0; i < str.length() - 1; i++) {
+            if(str.charAt(i) == str.charAt(i+1)) {
+                num++;
             } else {
-                answer += charArr[i];
-                if(len > 1) {
-                    answer += len;
+                answer += str.charAt(i);
+                if(num > 1) {
+                    answer += num;
                 }
-                len=1;
+                num = 1;
             }
         }
 

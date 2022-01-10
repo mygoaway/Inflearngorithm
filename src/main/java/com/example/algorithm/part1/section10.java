@@ -20,15 +20,15 @@ public class section10 {
         }
 
         answer = 0;
-
         for(int i = charArr.length - 1; i >= 0; i--) {
             if(charArr[i] == ch) {
                 answer = 0;
             } else {
                 answer++;
-                intArr[i] = Integer.min(intArr[i], answer);
+                intArr[i] = Math.min(intArr[i], answer);
             }
         }
+
 
         return intArr;
     }
