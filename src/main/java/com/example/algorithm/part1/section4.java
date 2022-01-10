@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class section4 {
     public ArrayList<String> solution(String[] strArr) {
         ArrayList<String> list = new ArrayList<>();
+
         for(String str : strArr) {
             char [] charArr = str.toCharArray();
             int lt = 0;
@@ -19,6 +20,7 @@ public class section4 {
             }
             list.add(String.valueOf(charArr));
         }
+
 
         return list;
     }

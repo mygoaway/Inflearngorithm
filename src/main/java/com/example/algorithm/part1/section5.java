@@ -10,6 +10,7 @@ public class section5 {
         char [] charArr = str.toCharArray();
         int lt = 0;
         int rt = charArr.length - 1;
+
         while(lt < rt) {
             if(!Character.isAlphabetic(charArr[lt])) {
                 lt++;

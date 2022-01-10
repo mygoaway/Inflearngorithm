@@ -14,7 +14,6 @@ public class section1 {
             }
         }
 
-
         return answer;
     }
 
