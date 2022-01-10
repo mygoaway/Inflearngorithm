@@ -28,18 +28,16 @@ public class section3 {
         }
 
         int lt = 0;
-        for(int rt = b-1; rt < intArrA.length; rt++) {
-            map.put(intArrA[rt], map.getOrDefault(intArrA[rt], 0) + 1);
+        for(int rt = b-1; rt < a; rt++) {
+            map.put(intArrA[rt], map.getOrDefault(intArrA[rt], 0)+1);
             answer.add(map.size());
 
-            map.put(intArrA[lt], map.get(intArrA[lt]) - 1);
-
-            if(map.get(intArrA[lt]) == 0) {
+            map.put(intArrA[lt], map.get(intArrA[lt])-1);
+            if(map.get(intArrA[lt]) == 0){
                 map.remove(intArrA[lt]);
             }
             lt++;
         }
-
 
         return answer;
     }

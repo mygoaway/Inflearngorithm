@@ -22,13 +22,13 @@ public class section1 {
         HashMap<Character, Integer> map = new HashMap<>();
 
         for(char ch : str.toCharArray()) {
-            map.put(ch, map.getOrDefault(ch, 0) +1);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
         for(char ch : map.keySet()) {
-            int num = map.get(ch);
-            if(num > max) {
-                max = num;
+            int size = map.get(ch);
+            if(size > max) {
+                max = size;
                 answer = ch;
             }
         }

@@ -17,7 +17,6 @@ public class section4 {
 
     public int solution(String str1, String str2) {
         int answer = 0;
-
         Map<Character, Integer> map2 = new HashMap<>();
         for(char ch : str2.toCharArray()) {
             map2.put(ch, map2.getOrDefault(ch, 0) + 1);
