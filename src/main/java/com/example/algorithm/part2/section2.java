@@ -20,15 +20,12 @@ public class section2 {
     public int solution(int [] intArr) {
         int answer = 1;
         int max = intArr[0];
-
         for(int i = 1; i < intArr.length; i++) {
             if(intArr[i] > max) {
                 max = intArr[i];
                 answer++;
             }
         }
-
-
         return answer;
     }
 }

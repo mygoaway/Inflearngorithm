@@ -26,15 +26,16 @@ public class section3 {
 
     public List<String> solution(int cnt, int [] aArr, int [] bArr) {
         List<String> answer = new ArrayList<>();
+
         for(int i = 0; i < cnt; i++) {
             int a = aArr[i];
             int b = bArr[i];
 
             if(a == b) {
                 answer.add("D");
-            } else if ( a == 1 && b == 3) {
-                answer.add("A");
             } else if ( a == 2 && b == 1) {
+                answer.add("A");
+            } else if ( a == 1 && b == 3) {
                 answer.add("A");
             } else if ( a == 3 && b == 2) {
                 answer.add("A");
@@ -42,6 +43,7 @@ public class section3 {
                 answer.add("B");
             }
         }
+
         return answer;
     }
 }

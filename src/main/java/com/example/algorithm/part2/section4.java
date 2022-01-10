@@ -22,9 +22,10 @@ public class section4 {
         intArr[0] = 1;
         intArr[1] = 1;
 
-        for(int i = 2; i < intArr.length; i++) {
+        for(int i = 2; i < cnt; i++) {
             intArr[i] = intArr[i-1] + intArr[i-2];
         }
+
 
         return intArr;
     }
