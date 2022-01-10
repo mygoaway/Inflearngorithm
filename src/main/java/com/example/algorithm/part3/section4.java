@@ -21,16 +21,14 @@ public class section4 {
         int sum = 0;
 
         int lt = 0;
-        for(int i = 0; i < intArrA.length; i++) {
-            sum += intArrA[i];
-
-            if(sum == b) {
+        for(int rt = 0; rt < a; rt++) {
+            sum += intArrA[rt];
+            if(sum==b){
                 answer++;
             }
-
             while(sum > b){
                 sum -= intArrA[lt++];
-                if(sum == b) {
+                if(sum == b){
                     answer++;
                 }
             }

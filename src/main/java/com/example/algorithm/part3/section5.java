@@ -27,7 +27,7 @@ public class section5 {
             sum += intArr[rt];
 
             if(sum == cnt) {
-                answer ++;
+                answer++;
             }
 
             while(sum > cnt) {
@@ -37,7 +37,6 @@ public class section5 {
                 }
             }
         }
-
 
         return answer;
     }
