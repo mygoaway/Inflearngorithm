@@ -27,6 +27,7 @@ public class section2 {
         for(char ch : stack) {
             answer += ch;
         }
+
         return answer;
     }
 }
