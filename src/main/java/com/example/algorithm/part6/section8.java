@@ -1,5 +1,6 @@
 package com.example.algorithm.part6;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,8 +28,8 @@ public class section8 {
         int rt = cnt - 1;
 
         while(lt <= rt) {
-            int mid = (lt + rt) / 2;
-            if(intArr[mid]== num) {
+            int mid = (lt+rt) / 2;
+            if(intArr[mid] == num) {
                 answer = mid+1;
             }
 

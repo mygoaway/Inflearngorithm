@@ -19,6 +19,7 @@ public class section9 {
 
     public int solution(int cnt, int num, int [] intArr) {
         int answer = 0;
+
         int lt = Arrays.stream(intArr).max().getAsInt();
         int rt = Arrays.stream(intArr).sum();
 
@@ -31,17 +32,17 @@ public class section9 {
                 lt = mid + 1;
             }
         }
+
         return answer;
     }
 
-
-    public int count(int [] arr, int capacity) {
-        int cnt = 1;
+    private int count(int[] intArr, int mid) {
+        int count = 1;
         int sum = 0;
 
-        for(int x : arr) {
-            if(sum+x > capacity) {
-                cnt++;
+        for(int x : intArr) {
+            if(sum+x > mid) {
+                count++;
                 sum = x;
             } else {
                 sum+=x;
@@ -49,6 +50,8 @@ public class section9 {
         }
 
 
-        return cnt;
+        return count;
     }
+
+
 }
