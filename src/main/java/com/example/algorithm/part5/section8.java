@@ -38,22 +38,27 @@ public class section8 {
         }
 
         while(!q.isEmpty()) {
-            Person p = q.poll();
-            for(Person px : q){
-                if(px.priority > p.priority) {
-                    q.offer(p);
-                    p = null;
+            Person person = q.poll();
+            for(Person pe : q) {
+                if(person.priority < pe.priority) {
+                    q.offer(person);
+                    person = null;
                     break;
                 }
             }
 
-            if(p != null) {
+            if(person != null) {
                 answer++;
-                if(p.num == people) {
+                if(person.num == people) {
                     return answer;
                 }
             }
         }
+
+
+
+
         return answer;
     }
+
 }
