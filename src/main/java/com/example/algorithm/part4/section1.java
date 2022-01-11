@@ -22,7 +22,7 @@ public class section1 {
         HashMap<Character, Integer> map = new HashMap<>();
 
         for(char ch : str.toCharArray()) {
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
+            map.put(ch, map.getOrDefault(ch, 0)+1);
         }
 
         for(char ch : map.keySet()) {
@@ -32,6 +32,7 @@ public class section1 {
                 answer = ch;
             }
         }
+
 
         return answer;
     }

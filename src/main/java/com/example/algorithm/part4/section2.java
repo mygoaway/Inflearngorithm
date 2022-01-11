@@ -19,7 +19,7 @@ public class section2 {
         HashMap<Character, Integer> map = new HashMap<>();
 
         for(char ch : str1.toCharArray()) {
-            map.put(ch, map.getOrDefault(ch,0)+1);
+            map.put(ch, map.getOrDefault(ch, 0)+1);
         }
 
         for(char ch : str2.toCharArray()) {
@@ -28,6 +28,7 @@ public class section2 {
             }
             map.put(ch, map.get(ch)-1);
         }
+
 
         return answer;
     }

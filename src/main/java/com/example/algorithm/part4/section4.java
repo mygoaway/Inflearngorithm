@@ -28,20 +28,19 @@ public class section4 {
         }
 
         int lt = 0;
-        for(int rt = str2.length() - 1; rt < str1.length(); rt++) {
-            map1.put(str1.charAt(rt), map1.getOrDefault(str1.charAt(rt), 0) + 1);
+        for(int i = str2.length() - 1; i < str1.length(); i++) {
+            map1.put(str1.charAt(i), map1.getOrDefault(str1.charAt(i), 0)+1);
 
-            if(map1.equals(map2)) {
+            if(map1.equals(map2)){
                 answer++;
             }
 
-            map1.put(str1.charAt(lt), map1.get(str1.charAt(lt)) -1);
+            map1.put(str1.charAt(lt), map1.get(str1.charAt(lt))-1);
             if(map1.get(str1.charAt(lt)) == 0) {
                 map1.remove(str1.charAt(lt));
             }
             lt++;
         }
-
 
         return answer;
     }
