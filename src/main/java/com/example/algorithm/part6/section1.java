@@ -27,9 +27,9 @@ public class section1 {
                     idx = j;
                 }
             }
-            int tmp = intArr[i];
+            int num = intArr[i];
             intArr[i] = intArr[idx];
-            intArr[idx] = tmp;
+            intArr[idx] = num;
         }
 
         return intArr;

@@ -25,7 +25,6 @@ public class section2 {
                 }
             }
         }
-
         return intArr;
     }
 }
