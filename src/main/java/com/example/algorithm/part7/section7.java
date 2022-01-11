@@ -3,7 +3,7 @@ package com.example.algorithm.part7;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// 이진트리순회(DFS)
+// 이진트리순회(BFS)
 class Nodes {
     int data;
     Nodes lt, rt;

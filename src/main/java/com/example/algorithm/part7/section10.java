@@ -3,7 +3,7 @@ package com.example.algorithm.part7;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// Tree 말단 노드까지의 가장 짧은 경로(dfs)
+// Tree 말단 노드까지의 가장 짧은 경로(BFS)
 public class section10 {
     Node root;
     public int bfs(Node root) {
