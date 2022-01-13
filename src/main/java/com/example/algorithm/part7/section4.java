@@ -8,22 +8,26 @@ public class section4 {
 
     public static void main(String[] args) {
         section4 se1 = new section4();
-        int n = 10;
+        int n = 45;
         fibo = new int[n+1];
         se1.dfs(n);
-        System.out.println(se1.dfs(10));
         for(int i = 1; i < fibo.length; i++) {
             System.out.print(fibo[i] + " ");
         }
     }
 
     public int dfs(int n) {
-        if(n==1) {
+        if(fibo[n] > 0) {
+            return fibo[n];
+        }
+
+        if(n==1){
             return fibo[n] = 1;
-        } else if (n==2) {
+        } else if(n==2) {
             return fibo[n] = 1;
         } else {
-            return fibo[n] = dfs(n-1) + dfs(n-2);
+            return fibo[n] = dfs(n-2) + dfs(n-1);
         }
+
     }
 }

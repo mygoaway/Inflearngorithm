@@ -9,6 +9,7 @@ public class section3 {
         System.out.println(se1.dfs(5));
     }
 
+
     public int dfs(int n) {
         if(n == 1) {
             return 1;
