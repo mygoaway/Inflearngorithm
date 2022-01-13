@@ -7,7 +7,6 @@ public class section1 {
         section1 se1 = new section1();
         se1.dfs(3);
     }
-
     public void dfs(int n) {
         if(n == 0) {
             return;
