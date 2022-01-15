@@ -1,6 +1,6 @@
 package com.example.algorithm.part7;
 
-// 이진트리순회(DFS)
+// 이진트리순회 - DFS(깊이 우선 탐색)
 class Node {
     int data;
     Node lt, rt;
@@ -17,8 +17,8 @@ public class section5 {
             return;
         } else {
             dfs(root.lt);
-            System.out.println(root.data);
             dfs(root.rt);
+            System.out.println(root.data);
         }
     }
 

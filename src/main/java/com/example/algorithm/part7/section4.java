@@ -20,14 +20,12 @@ public class section4 {
         if(fibo[n] > 0) {
             return fibo[n];
         }
-
-        if(n==1){
+        if(n==1) {
             return fibo[n] = 1;
-        } else if(n==2) {
+        } else if (n==2) {
             return fibo[n] = 1;
         } else {
-            return fibo[n] = dfs(n-2) + dfs(n-1);
+            return fibo[n] = dfs(n-1) + dfs(n-2);
         }
-
     }
 }
