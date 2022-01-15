@@ -3,7 +3,7 @@ package com.example.algorithm.part7;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// 이진트리순회(BFS)
+// 이진트리순회 - BFS(넓이우선탐색)
 class Nodes {
     int data;
     Nodes lt, rt;
@@ -19,18 +19,14 @@ public class section7 {
         Queue<Nodes> q = new LinkedList<>();
         q.offer(root);
         int L = 0;
-        while(!q.isEmpty()) {
-            System.out.print(L + " : ");
-            int size = q.size();
-            for(int i = 0; i < size; i++) {
-                Nodes nodes = q.poll();
-                System.out.print(nodes.data);
-                if(nodes.lt != null) {
-                    q.offer(nodes.lt);
-                }
-                if(nodes.rt != null) {
-                    q.offer(nodes.rt);
-                }
+        while (!q.isEmpty()) {
+            int len = q.size();
+            System.out.print(L + ": ");
+            for(int i = 0; i < len; i++) {
+                Nodes current = q.poll();
+                System.out.print(current.data+" ");
+                if(current.lt!=null) q.offer(current.lt);
+                if(current.rt!=null) q.offer(current.rt);
             }
             L++;
             System.out.println();

@@ -18,7 +18,7 @@ public class section5 {
         } else {
             dfs(root.lt);
             dfs(root.rt);
-            System.out.println(root.data);
+            System.out.print(root.data + " ");
         }
     }
 

@@ -4,28 +4,29 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+// 송아지 찾기 - BFS(넓이우선탐색) = 최단거리 알고리즘
 public class section8 {
-    int [] dis = {1, -1, 5};
-    int [] ch;
-    Queue<Integer> q = new LinkedList<>();
+    int [] distance = {1, -1, 5};
+    int [] check;
+    Queue<Integer> queue = new LinkedList<>();
 
     public int bfs(int s, int e) {
-        ch = new int[10001];
-        ch[s] = 1;
-        q.offer(s);
+        check = new int[10001];
+        check[s] = 1;
+        queue.offer(s);
         int L = 0;
-        while(!q.isEmpty()) {
-            int size = q.size();
-            for(int i = 0; i < size; i++) {
-                Integer x = q.poll();
-                for(int j = 0; j < dis.length; j++) {
-                    int xj = x + dis[j];
-                    if(xj == e) {
+        while (!queue.isEmpty()) {
+            int len = queue.size();
+            for(int i = 0; i < len; i++) {
+                int nowPosition = queue.poll();
+                for(int update : distance) {
+                    int updatePosition = nowPosition + update;
+                    if(updatePosition == e) {
                         return L+1;
                     }
-                    if(xj >= 1 && xj <= 10000 && ch[xj] == 0) {
-                        ch[xj] = 1;
-                        q.offer(xj);
+                    if(updatePosition >= 1 && updatePosition <= 10000 & check[updatePosition] == 0) {
+                        check[updatePosition] = 1;
+                        queue.offer(updatePosition);
                     }
                 }
             }

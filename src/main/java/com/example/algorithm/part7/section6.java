@@ -9,14 +9,14 @@ public class section6 {
     static int [] ch; // 체크배열
 
     public void dfs(int L) {
-        if (L == n+1) {
-            String tmp = "";
-            for(int i = 1; i <= 3; i++) {
+        if(L == n+1) {
+            String tmp ="";
+            for(int i = 1; i <= n; i++) {
                 if(ch[i] == 1) {
                     tmp += i + " ";
                 }
             }
-            if(tmp.length() > 0){
+            if(tmp.length() > 0) {
                 System.out.println(tmp);
             }
 
