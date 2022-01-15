@@ -11,19 +11,17 @@ public class section10 {
         q.offer(root);
         int L = 0;
         while(!q.isEmpty()) {
-            int size = q.size();
-            for(int i = 0; i < size; i++) {
-                Node node = q.poll();
-
-                if(node.lt == null && node.rt == null) {
+            int len = q.size();
+            for(int i = 0; i < len; i++) {
+                Node current = q.poll();
+                if(current.lt == null && current.rt == null) {
                     return L;
                 }
-
-                if(node.lt != null) {
-                    q.offer(node.lt);
+                if(current.lt != null) {
+                    q.offer(current.lt);
                 }
-                if(node.rt != null) {
-                    q.offer(node.rt);
+                if(current.rt != null) {
+                    q.offer(current.rt);
                 }
             }
             L++;

@@ -1,6 +1,7 @@
 package com.example.algorithm.part7;
 
-// Tree 말단 노드까지의 가장 짧은 경로(dfs)
+// Tree 말단 노드까지의 가장 짧은 경로(DFS)
+// 자식 노드는 무조건 둘다 있어야 함
 public class section9 {
     Node root;
     public int dfs(int level, Node root) {
