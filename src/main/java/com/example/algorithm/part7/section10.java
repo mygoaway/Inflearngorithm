@@ -7,21 +7,23 @@ import java.util.Queue;
 public class section10 {
     Node root;
     public int bfs(Node root) {
-        Queue<Node> q = new LinkedList<>();
-        q.offer(root);
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
         int L = 0;
-        while(!q.isEmpty()) {
-            int len = q.size();
-            for(int i = 0; i < len; i++) {
-                Node current = q.poll();
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            for(int i = 0; i < size; i++) {
+                Node current = queue.poll();
                 if(current.lt == null && current.rt == null) {
                     return L;
                 }
+
                 if(current.lt != null) {
-                    q.offer(current.lt);
+                    queue.offer(current.lt);
                 }
+
                 if(current.rt != null) {
-                    q.offer(current.rt);
+                    queue.offer(current.rt);
                 }
             }
             L++;

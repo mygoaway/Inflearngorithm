@@ -26,10 +26,10 @@ public class section11 {
         section11 section11 = new section11();
         Scanner scan = new Scanner(System.in);
 
-        n = scan.nextInt();
-        m = scan.nextInt();
-        graph = new int[n+1][n+1];
-        ch = new int[n+1];
+        n = scan.nextInt(); // 노드 개수
+        m = scan.nextInt(); // 간선 개수
+        graph = new int[n+1][n+1]; // 그래프
+        ch = new int[n+1]; // 체크
         for(int i = 0; i < m; i++) {
             int a = scan.nextInt();
             int b = scan.nextInt();

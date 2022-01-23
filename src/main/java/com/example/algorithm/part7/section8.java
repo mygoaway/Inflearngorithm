@@ -16,18 +16,21 @@ public class section8 {
         queue.offer(s);
         int L = 0;
         while (!queue.isEmpty()) {
-            int len = queue.size();
-            for(int i = 0; i < len; i++) {
-                int nowPosition = queue.poll();
-                for(int update : distance) {
-                    int updatePosition = nowPosition + update;
-                    if(updatePosition == e) {
+            int size = queue.size();
+            for(int i = 0; i < size; i++) {
+                Integer currentDate = queue.poll();
+                for(int num : distance) {
+                    int updateDate = currentDate + num;
+
+                    if(updateDate == e) {
                         return L+1;
                     }
-                    if(updatePosition >= 1 && updatePosition <= 10000 & check[updatePosition] == 0) {
-                        check[updatePosition] = 1;
-                        queue.offer(updatePosition);
+
+                    if(updateDate >= 1 && updateDate <= 10000 & check[updateDate] == 0) {
+                        check[updateDate] = 1;
+                        queue.offer(updateDate);
                     }
+
                 }
             }
             L++;
