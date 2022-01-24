@@ -15,12 +15,15 @@ public class section13 {
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(v);
         while (!queue.isEmpty()) {
-            int currentValue = queue.poll();
-            for(int nextVale : graph.get(currentValue)) {
-                if(ch[nextVale] == 0) {
-                    ch[nextVale] = 1;
-                    queue.offer(nextVale);
-                    dis[nextVale] = dis[currentValue] + 1;
+            int size = queue.size();
+            for(int i = 0; i < size; i++) {
+                int currentValue = queue.poll();
+                for (int nextVale : graph.get(currentValue)) {
+                    if (ch[nextVale] == 0) {
+                        ch[nextVale] = 1;
+                        queue.offer(nextVale);
+                        dis[nextVale] = dis[currentValue] + 1;
+                    }
                 }
             }
         }
