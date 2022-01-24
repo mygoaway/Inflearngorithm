@@ -11,7 +11,7 @@ public class section4 {
         int n = 45;
         fibo = new int[n+1];
         se1.dfs(n);
-        for(int i = 1; i <= n; i++) {
+        for(int i = 1; i <= 45; i++) {
             System.out.print(fibo[i] + " ");
         }
     }
@@ -28,5 +28,7 @@ public class section4 {
         } else {
             return fibo[n] = dfs(n-1) + dfs(n-2);
         }
+
+
     }
 }

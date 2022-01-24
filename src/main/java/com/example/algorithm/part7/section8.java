@@ -15,22 +15,21 @@ public class section8 {
         check[s] = 1;
         queue.offer(s);
         int L = 0;
-        while (!queue.isEmpty()) {
+        while(!queue.isEmpty()) {
             int size = queue.size();
             for(int i = 0; i < size; i++) {
-                Integer currentDate = queue.poll();
-                for(int num : distance) {
-                    int updateDate = currentDate + num;
+                Integer current = queue.poll();
+                for(int dist : distance) {
+                    int updateData = current + dist;
 
-                    if(updateDate == e) {
+                    if(updateData == e) {
                         return L+1;
                     }
 
-                    if(updateDate >= 1 && updateDate <= 10000 & check[updateDate] == 0) {
-                        check[updateDate] = 1;
-                        queue.offer(updateDate);
+                    if(updateData >= 1 && updateData <= 10000 && check[updateData] == 0) {
+                        check[updateData] = 1;
+                        queue.offer(updateData);
                     }
-
                 }
             }
             L++;
