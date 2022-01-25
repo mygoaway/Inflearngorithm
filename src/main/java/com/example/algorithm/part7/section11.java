@@ -12,8 +12,8 @@ public class section11 {
         if(v == n) {
             answer++;
         } else {
-            for(int i = 1; i<=n; i++) {
-                if(graph[v][i] == 1 && ch[i] == 0){
+            for(int i = 1; i <= n; i++) {
+                if(graph[v][i] == 1 && ch[i] == 0) {
                     ch[i] = 1;
                     DFS(i);
                     ch[i] = 0;
@@ -26,10 +26,10 @@ public class section11 {
         section11 section11 = new section11();
         Scanner scan = new Scanner(System.in);
 
-        n = scan.nextInt(); // 노드 개수
-        m = scan.nextInt(); // 간선 개수
-        graph = new int[n+1][n+1]; // 그래프
-        ch = new int[n+1]; // 체크
+        n = scan.nextInt();
+        m = scan.nextInt();
+        graph = new int[n+1][n+1];
+        ch = new int[n+1];
         for(int i = 0; i < m; i++) {
             int a = scan.nextInt();
             int b = scan.nextInt();
