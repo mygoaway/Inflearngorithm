@@ -23,6 +23,7 @@ public class section1 {
                 flag = true;
             }
 
+
         } else {
             DFS(L+1, sum+arr[L], arr);
             DFS(L+1, sum, arr);
@@ -32,6 +33,7 @@ public class section1 {
     public static void main(String[] args) {
         section1 se1 = new section1();
         Scanner scan = new Scanner(System.in);
+
         n = scan.nextInt();
         int [] arr = new int[n];
         for(int i = 0; i < n; i++) {
