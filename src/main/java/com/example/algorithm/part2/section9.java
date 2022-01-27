@@ -1,7 +1,5 @@
 package com.example.algorithm.part2;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class section9 {
@@ -30,8 +28,8 @@ public class section9 {
                 answer1 += intArr[i][j];
                 answer2 += intArr[j][i];
             }
-            answer = Integer.max(answer, answer1);
-            answer = Integer.max(answer, answer2);
+            answer = Math.max(answer, answer1);
+            answer = Math.max(answer, answer2);
         }
 
         answer1 = 0;
@@ -39,11 +37,11 @@ public class section9 {
 
         for(int i = 0; i < intArr.length; i++) {
             answer1 += intArr[i][i];
-            answer2 += intArr[i][cnt-1-i];
+            answer2 += intArr[i][5-i-1];
         }
 
-        answer = Integer.max(answer, answer1);
-        answer = Integer.max(answer, answer2);
+        answer = Math.max(answer, answer1);
+        answer = Math.max(answer, answer2);
 
         return answer;
     }

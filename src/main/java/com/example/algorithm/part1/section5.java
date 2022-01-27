@@ -1,6 +1,5 @@
 package com.example.algorithm.part1;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class section5 {
@@ -10,7 +9,6 @@ public class section5 {
         char [] charArr = str.toCharArray();
         int lt = 0;
         int rt = charArr.length - 1;
-
         while(lt < rt) {
             if(!Character.isAlphabetic(charArr[lt])) {
                 lt++;
@@ -24,8 +22,6 @@ public class section5 {
                 rt--;
             }
         }
-
-
         answer = String.valueOf(charArr);
         return answer;
     }

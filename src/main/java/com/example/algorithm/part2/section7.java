@@ -1,7 +1,5 @@
 package com.example.algorithm.part2;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class section7 {
@@ -20,8 +18,8 @@ public class section7 {
         int sum = 0;
         int num = 0;
 
-        for(int i : intArr) {
-            if(i == 1) {
+        for(int i = 0; i < intArr.length; i++) {
+            if(intArr[i] == 1) {
                 num++;
                 sum += num;
             } else {

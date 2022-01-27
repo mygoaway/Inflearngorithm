@@ -6,7 +6,6 @@ public class section11 {
     public String solution(String str) {
         String answer = "";
         int num = 1;
-
         str = str + " ";
 
         for(int i = 0; i < str.length() - 1; i++) {
@@ -20,7 +19,6 @@ public class section11 {
                 num = 1;
             }
         }
-
 
         return answer;
     }

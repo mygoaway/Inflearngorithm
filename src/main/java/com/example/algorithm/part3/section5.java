@@ -31,10 +31,11 @@ public class section5 {
             }
 
             while(sum > cnt) {
-                sum -= intArr[lt++];
+                sum -= intArr[lt];
                 if(sum == cnt) {
                     answer++;
                 }
+                lt++;
             }
         }
 

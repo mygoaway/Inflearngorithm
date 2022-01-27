@@ -31,7 +31,6 @@ public class section8 {
             answer.add(num);
         }
 
-
         return answer;
     }
 }

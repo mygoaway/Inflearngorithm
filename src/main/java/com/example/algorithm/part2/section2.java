@@ -1,7 +1,5 @@
 package com.example.algorithm.part2;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class section2 {
@@ -20,12 +18,15 @@ public class section2 {
     public int solution(int [] intArr) {
         int answer = 1;
         int max = intArr[0];
-        for(int i = 1; i < intArr.length; i++) {
+
+        for(int i = 0; i < intArr.length; i++) {
             if(intArr[i] > max) {
                 max = intArr[i];
                 answer++;
             }
         }
+
+
         return answer;
     }
 }

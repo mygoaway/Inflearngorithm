@@ -9,28 +9,31 @@ public class section4 {
 
         int cntA = scan.nextInt();
         int cntB = scan.nextInt();
-        int [] intArrA = new int[cntA];
-        for(int i = 0; i < intArrA.length; i++) {
-            intArrA[i] = scan.nextInt();
+        int [] intArr = new int[cntA];
+        for(int i = 0; i < intArr.length; i++) {
+            intArr[i] = scan.nextInt();
         }
-        System.out.print(se1.solution(cntA, cntB, intArrA));
+        System.out.print(se1.solution(cntA, cntB, intArr));
     }
 
-    public int solution(int a, int b, int [] intArrA) {
+    public int solution(int a, int b, int [] intArr) {
         int answer = 0;
         int sum = 0;
 
         int lt = 0;
         for(int rt = 0; rt < a; rt++) {
-            sum += intArrA[rt];
-            if(sum==b){
+            sum += intArr[rt];
+
+            if(sum == b) {
                 answer++;
             }
-            while(sum > b){
-                sum -= intArrA[lt++];
-                if(sum == b){
+
+            while(sum > b) {
+                sum -= intArr[lt];
+                if(sum == b) {
                     answer++;
                 }
+                lt++;
             }
         }
 

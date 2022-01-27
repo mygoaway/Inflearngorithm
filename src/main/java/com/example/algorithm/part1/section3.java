@@ -9,13 +9,12 @@ public class section3 {
 
         String [] strArr = str.split(" ");
         for(String st : strArr) {
-            int size = st.length();
-            if(size > max) {
-                max = size;
+            int len = st.length();
+            if(len > max) {
+                max = len;
                 answer = st;
             }
         }
-
 
         return answer;
     }

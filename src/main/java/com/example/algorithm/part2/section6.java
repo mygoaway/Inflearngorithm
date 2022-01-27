@@ -22,12 +22,12 @@ public class section6 {
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
 
-        for(int i : intArr) {
+        for(int x : intArr) {
             int res = 0;
-            while ( i > 0 ) {
-                int num = i % 10;
+            while(x > 0) {
+                int num = x % 10;
                 res = res * 10 + num;
-                i = i / 10;
+                x = x / 10;
             }
 
             if(isPermit(res)) {
@@ -35,16 +35,18 @@ public class section6 {
             }
         }
 
+
         return answer;
     }
 
     private boolean isPermit(int res) {
         if(res == 1) {
             return false;
-        }
-        for(int i = 2; i < res; i++) {
-            if(res % i == 0){
-                return false;
+        } else {
+            for(int i = 2; i < res; i++) {
+                if(res % i == 0) {
+                    return false;
+                }
             }
         }
         return true;

@@ -22,11 +22,14 @@ public class section1 {
     public List<Integer> solution(int cnt, int [] intArr) {
         List<Integer> answer = new ArrayList<>();
         answer.add(intArr[0]);
+
         for(int i = 1; i < intArr.length; i++) {
             if(intArr[i] > intArr[i-1]) {
                 answer.add(intArr[i]);
             }
         }
+
+
         return answer;
     }
 }

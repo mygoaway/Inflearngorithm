@@ -8,7 +8,6 @@ public class section10 {
         int answer = 0;
 
         char [] charArr = str.toCharArray();
-
         for(int i = 0; i < charArr.length; i++) {
             if(charArr[i] == ch) {
                 answer = 0;
@@ -18,17 +17,16 @@ public class section10 {
                 intArr[i] = answer;
             }
         }
-
         answer = 0;
+
         for(int i = charArr.length - 1; i >= 0; i--) {
             if(charArr[i] == ch) {
                 answer = 0;
             } else {
                 answer++;
-                intArr[i] = Math.min(intArr[i], answer);
+                intArr[i] = Math.min(intArr[i],answer);
             }
         }
-
 
         return intArr;
     }
