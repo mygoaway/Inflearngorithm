@@ -1,8 +1,6 @@
 package com.example.algorithm.part4;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 public class section1 {
@@ -22,17 +20,16 @@ public class section1 {
         HashMap<Character, Integer> map = new HashMap<>();
 
         for(char ch : str.toCharArray()) {
-            map.put(ch, map.getOrDefault(ch, 0)+1);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
 
         for(char ch : map.keySet()) {
-            int size = map.get(ch);
-            if(size > max) {
-                max = size;
+            int num = map.get(ch);
+            if(num > max ){
+                max = num;
                 answer = ch;
             }
         }
-
 
         return answer;
     }
