@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class section1 {
     public int solution(String str, char t) {
         int answer = 0;
-
         str = str.toLowerCase();
         for(char ch : str.toCharArray()) {
             if(ch == t) {
